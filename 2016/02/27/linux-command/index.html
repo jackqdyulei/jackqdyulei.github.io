@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>Linux指令学习 | Lei YU&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="常用Linux指令的学习与整理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux指令学习">
+<meta property="og:url" content="http://yoursite.com/2016/02/27/linux-command/index.html">
+<meta property="og:site_name" content="Lei YU's blog">
+<meta property="og:description" content="常用Linux指令的学习与整理">
+<meta property="og:updated_time" content="2016-02-27T17:09:42.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux指令学习">
+<meta name="twitter:description" content="常用Linux指令的学习与整理">
+  
+    <link rel="alternative" href="/atom.xml" title="Lei YU&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/images/avater.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Lei YU</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Keep it simple, stupid</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/technique">技术</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/jackqdyulei" title="github">github</a>
+					        
+								<a class="linkedin" target="_blank" href="https://www.linkedin.com/profile/preview?locale=en_US&trk=prof-0-sb-preview-primary-button" title="linkedin">linkedin</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/1875087917/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/yu-lei-50-41" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://wdxtub.com/">小土刀的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">很懒，什么也没留下</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Lei YU</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/images/avater.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Lei YU</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Keep it simple, stupid</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/technique">技术</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/jackqdyulei" title="github">github</a>
+			        
+						<a class="linkedin" target="_blank" href="https://www.linkedin.com/profile/preview?locale=en_US&trk=prof-0-sb-preview-primary-button" title="linkedin">linkedin</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/1875087917/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/yu-lei-50-41" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-linux-command" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/27/linux-command/" class="article-date">
+  	<time datetime="2016-02-27T13:44:03.000Z" itemprop="datePublished">2016-02-27</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Linux指令学习
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/tutorials/">tutorials</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>常用Linux指令的学习与整理</p>
+<a id="more"></a>
+<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="读懂man手册"><a href="#读懂man手册" class="headerlink" title="读懂man手册"></a>读懂man手册</h3><p>其实，对于任何不理解的指令，我们可以执行<code>man command</code>查看指令的详细用法。下面我们学习一下<code>man</code>手册的语法结构。</p>
+<p>在<code>man</code>手册中，我们主要关心<code>Synopsis</code>与<code>Description</code>。前者是<code>命令语法的摘要</code>，后者是<code>完整的描述</code></p>
+<h5 id="Synopsis"><a href="#Synopsis" class="headerlink" title="Synopsis"></a>Synopsis</h5><p>通常的结构为<code>command [OPTION]... [FILE]...</code>。其中要注意以下事项。</p>
+<ul>
+<li><code>[]</code>里面的选项表示可有可无</li>
+<li><code>...</code>表示选项可以列多个</li>
+<li>选项通常有两种表示方法<ul>
+<li>长选项： 用<code>--</code>引导，后面跟完整的单词，如<code>--help</code></li>
+<li>短选项： 用<code>-</code>引导，后面跟单个字符，如<code>-a</code></li>
+</ul>
+</li>
+<li>多个短选项可以组合使用，例如<code>-a -l</code>可以写为<code>-al</code></li>
+<li>由<code>|</code>分开的几个选项，表示只能从几个选项中选择一个</li>
+</ul>
+<h5 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h5><p>一般描述中会列举参数的详细含义</p>
+<h2 id="基本指令"><a href="#基本指令" class="headerlink" title="基本指令"></a>基本指令</h2><p>在这里，主要介绍基于文件增删查改的指令</p>
+<h3 id="ls指令"><a href="#ls指令" class="headerlink" title="ls指令"></a>ls指令</h3><blockquote>
+<p>ls [OPTION]… [FILE]…</p>
+</blockquote>
+<p>列出目录下的文件，常用的用法有：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ ls --color 以彩色显示档案 </span><br><span class="line">$ ls <span class="operator">-l</span>     显示详细资料 </span><br><span class="line">$ ls <span class="operator">-a</span>     显示隐藏档案 </span><br><span class="line">$ ls -al    同时显示隐藏档案与详细资料</span><br></pre></td></tr></table></figure></p>
+<h3 id="cp指令"><a href="#cp指令" class="headerlink" title="cp指令"></a>cp指令</h3><blockquote>
+<p>cp [OPTION]… [-T] SOURCE DEST<br>cp [OPTION]… SOURCE… DIRECTORY</p>
+</blockquote>
+<p>将一个或多个文件进行拷贝，常用的用法有：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cp <span class="number">1</span>.txt <span class="number">2</span>.txt 	复制<span class="number">1</span>.txt,并重命名为<span class="number">2</span>.txt </span><br><span class="line">$ cp <span class="number">1</span>.txt ./dir/	将<span class="number">1</span>.txt复制到dir目录下</span><br><span class="line">$ cp <span class="number">1</span>.txt <span class="number">2</span>.txt ./dir	将两个文件复制到dir目录下</span><br></pre></td></tr></table></figure>
+<h3 id="mv指令"><a href="#mv指令" class="headerlink" title="mv指令"></a>mv指令</h3><blockquote>
+<p>mv [OPTION]… [-T] SOURCE DEST<br>mv [OPTION]… SOURCE… DIRECTORY</p>
+</blockquote>
+<p>将一个或多个文件进行移动。我们会发现<code>cp</code>和<code>mv</code>的指令结构完全一致，常用的用法有：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mv <span class="number">1</span>.txt <span class="number">2</span>.txt 	移动<span class="number">1</span>.txt,并重命名为<span class="number">2</span>.txt </span><br><span class="line">$ mv <span class="number">1</span>.txt ./dir/	将<span class="number">1</span>.txt移动到dir目录下</span><br><span class="line">$ mv <span class="number">1</span>.txt <span class="number">2</span>.txt ./dir	将两个文件移动到dir目录下</span><br></pre></td></tr></table></figure>
+<h3 id="rm指令"><a href="#rm指令" class="headerlink" title="rm指令"></a>rm指令</h3><blockquote>
+<p>cp [OPTION]… FILE…</p>
+</blockquote>
+<p>将一个或多个文件进行删除，常用的用法有：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rm -rf directory 将文件夹下的所有文件强制删除</span><br></pre></td></tr></table></figure>
+<h3 id="pwd指令"><a href="#pwd指令" class="headerlink" title="pwd指令"></a>pwd指令</h3><blockquote>
+<p>pwd [OPTION]…</p>
+</blockquote>
+<p>显示当前的文件目录</p>
+<h3 id="cat指令"><a href="#cat指令" class="headerlink" title="cat指令"></a>cat指令</h3><blockquote>
+<p>cat [OPTION]… [FILE]…</p>
+</blockquote>
+<p>列出文件的内容，但配合<code>重定向符号</code>有很多种用法。常用的用法有：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cat <span class="number">1</span>.txt 	列出<span class="number">1</span>.txt里的内容 </span><br><span class="line">$ cat &gt; <span class="number">2</span>.txt   将后面输入的内容存入<span class="number">2</span>.txt</span><br></pre></td></tr></table></figure>
+<h2 id="高级指令"><a href="#高级指令" class="headerlink" title="高级指令"></a>高级指令</h2><p>grep awk sed cut</p>
+<h3 id="find指令"><a href="#find指令" class="headerlink" title="find指令"></a>find指令</h3><blockquote>
+<p> find [-H] [-L] [-P] [-Olevel] [-D help|tree|search|stat|rates|opt|exec] [path…] [expression]</p>
+</blockquote>
+<p>但是<code>[-H] [-L] [-P] [-Olevel] [-D help|tree|search|stat|rates|opt|exec]</code>并不常用，因此指令可以简化为</p>
+<blockquote>
+<p>find [path…] [experssion]</p>
+</blockquote>
+<p>该指令执行查找，常用的用法有：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ find . -name file.txt	在当前目录下搜索文件file.txt</span><br><span class="line">$ find . -name <span class="string">"*.txt"</span> 	在当前目录下搜索所有txt文件</span><br><span class="line">$ find . -perm <span class="number">755</span> 		在当前目录下查找权限为<span class="number">755</span>的文件</span><br></pre></td></tr></table></figure>
+<h3 id="chmod指令"><a href="#chmod指令" class="headerlink" title="chmod指令"></a>chmod指令</h3><blockquote>
+<p>chmod [OPTION]… MODE[,MODE]… FILE…</p>
+</blockquote>
+<p>修改一个或多个文件的权限，常用的用法有：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ chmod <span class="number">777</span> <span class="number">1</span>.txt 将<span class="number">1</span>.txt权限修改为<span class="number">777</span></span><br><span class="line">￥ chmod a+x <span class="number">1</span>.txt <span class="number">2</span>.txt 给两个文件的所有用户添加执行权限</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>要注意[ugoa]的含义。u-&gt;owner, g-&gt;group, o-&gt;other, a-&gt;all</p>
+</blockquote>
+<h3 id="grep指令"><a href="#grep指令" class="headerlink" title="grep指令"></a>grep指令</h3><blockquote>
+<p> grep [OPTION]… PATTERN [FILE]…</p>
+</blockquote>
+<p>在FILE的每一行中，查找满足PATTERN的行并输出：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ls | grep <span class="number">2</span>.txt 		在当前路径中查找似乎否有<span class="number">2</span>.txt</span><br><span class="line">$ grep <span class="string">'[^0-9]'</span> <span class="number">3</span>.txt	在<span class="number">3</span>.txt种查找包含非数字的行</span><br></pre></td></tr></table></figure>
+<h3 id="awk指令"><a href="#awk指令" class="headerlink" title="awk指令"></a>awk指令</h3><p>awk 指令比较复杂，但是也特别灵活。今后有时间会详细写一下，这里只列举几个例子<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ awk &lt; <span class="number">1</span>.csv -F, <span class="string">'&#123;print $7&#125;'</span>  将文件<span class="number">1</span>.csv的每一行按照<span class="string">','</span>分割，输出第七列</span><br></pre></td></tr></table></figure></p>
+<p>再来一个复杂的例子<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">cat <span class="number">2</span>.csv | awk <span class="string">'</span><br><span class="line">  BEGIN &#123;</span><br><span class="line">    maxCount = 0;</span><br><span class="line">    id;</span><br><span class="line">    FS = ",";</span><br><span class="line">  &#125;</span><br><span class="line">  &#123;</span><br><span class="line">    count[$5]+=$13;</span><br><span class="line">    name[$5] = $7;</span><br><span class="line">  &#125;</span><br><span class="line">  END &#123;</span><br><span class="line">    for (c in count) &#123;</span><br><span class="line">      if (count[c] &gt; maxCount) &#123;</span><br><span class="line">        maxCount = count[c];</span><br><span class="line">        id = c;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    print name[id];</span><br><span class="line">  &#125;</span><br><span class="line">'</span></span><br></pre></td></tr></table></figure></p>
+<p>如果在2.csv种，第5列表示id，第7列表示名字，第13列表示销量。那么该代码表示找到总销量最多的id，并输出其中的一个名字。</p>
+<p>感觉awk写复杂了就是c语言代码了。</p>
+<h3 id="cut指令"><a href="#cut指令" class="headerlink" title="cut指令"></a>cut指令</h3><blockquote>
+<p> cut OPTION… [FILE]…</p>
+</blockquote>
+<p>从文件中截取特订的列，常见的用法有：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cut <span class="operator">-d</span><span class="string">','</span> <span class="operator">-f</span>1 file.txt		将file.txt已逗号分隔，输出第一列</span><br><span class="line">$ find -c1-<span class="number">3</span> file.txt		输出file.txt的前三列</span><br></pre></td></tr></table></figure></p>
+<h3 id="sed指令"><a href="#sed指令" class="headerlink" title="sed指令"></a>sed指令</h3><p>该指令也是一个比较复杂的指令，暂不介绍。</p>
+<h2 id="系统指令"><a href="#系统指令" class="headerlink" title="系统指令"></a>系统指令</h2><h3 id="ps指令"><a href="#ps指令" class="headerlink" title="ps指令"></a>ps指令</h3><blockquote>
+<p> ps [OPTIONS]</p>
+</blockquote>
+<p>查看当前进程，通常和grep一起用：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ps | grep bash 	查看名为bash的进程</span><br></pre></td></tr></table></figure></p>
+<h3 id="kill指令"><a href="#kill指令" class="headerlink" title="kill指令"></a>kill指令</h3><blockquote>
+<p> kill [-s signal|-p] [–] pid…</p>
+</blockquote>
+<p>向pid进程发送信号</p>
+<h3 id="telent指令"><a href="#telent指令" class="headerlink" title="telent指令"></a>telent指令</h3><p>用于和主机通信的指令，通常用于诊断服务器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ telent myhost.com</span><br><span class="line">$ telent <span class="operator">-l</span> myusername myhost.com:<span class="number">5555</span></span><br></pre></td></tr></table></figure>
+<h3 id="parted指令"><a href="#parted指令" class="headerlink" title="parted指令"></a>parted指令</h3><blockquote>
+<p>parted [options] [device [command [options…]…]]</p>
+</blockquote>
+<p>查看或操作分区，常用的指令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ parted <span class="operator">-l</span> 列出所有的磁盘分区</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/02/26/hexo-github-tutorial/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo简明教程</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="linux-command" data-title="Linux指令学习" data-url="http://yoursite.com/2016/02/27/linux-command/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"jackqdyulei-github"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Lei YU
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

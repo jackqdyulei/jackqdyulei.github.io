@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-27T04:55:08.000Z</updated>
+  <updated>2016-02-27T17:09:42.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,120 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux指令学习</title>
+    <link href="http://yoursite.com/2016/02/27/linux-command/"/>
+    <id>http://yoursite.com/2016/02/27/linux-command/</id>
+    <published>2016-02-27T13:44:03.000Z</published>
+    <updated>2016-02-27T17:09:42.000Z</updated>
+    
+    <content type="html">&lt;p&gt;常用Linux指令的学习与整理&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;基础知识&quot;&gt;&lt;a href=&quot;#基础知识&quot; class=&quot;headerlink&quot; title=&quot;基础知识&quot;&gt;&lt;/a&gt;基础知识&lt;/h2&gt;&lt;h3 id=&quot;读懂man手册&quot;&gt;&lt;a href=&quot;#读懂man手册&quot; class=&quot;headerlink&quot; title=&quot;读懂man手册&quot;&gt;&lt;/a&gt;读懂man手册&lt;/h3&gt;&lt;p&gt;其实，对于任何不理解的指令，我们可以执行&lt;code&gt;man command&lt;/code&gt;查看指令的详细用法。下面我们学习一下&lt;code&gt;man&lt;/code&gt;手册的语法结构。&lt;/p&gt;
+&lt;p&gt;在&lt;code&gt;man&lt;/code&gt;手册中，我们主要关心&lt;code&gt;Synopsis&lt;/code&gt;与&lt;code&gt;Description&lt;/code&gt;。前者是&lt;code&gt;命令语法的摘要&lt;/code&gt;，后者是&lt;code&gt;完整的描述&lt;/code&gt;&lt;/p&gt;
+&lt;h5 id=&quot;Synopsis&quot;&gt;&lt;a href=&quot;#Synopsis&quot; class=&quot;headerlink&quot; title=&quot;Synopsis&quot;&gt;&lt;/a&gt;Synopsis&lt;/h5&gt;&lt;p&gt;通常的结构为&lt;code&gt;command [OPTION]... [FILE]...&lt;/code&gt;。其中要注意以下事项。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[]&lt;/code&gt;里面的选项表示可有可无&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;...&lt;/code&gt;表示选项可以列多个&lt;/li&gt;
+&lt;li&gt;选项通常有两种表示方法&lt;ul&gt;
+&lt;li&gt;长选项： 用&lt;code&gt;--&lt;/code&gt;引导，后面跟完整的单词，如&lt;code&gt;--help&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;短选项： 用&lt;code&gt;-&lt;/code&gt;引导，后面跟单个字符，如&lt;code&gt;-a&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;多个短选项可以组合使用，例如&lt;code&gt;-a -l&lt;/code&gt;可以写为&lt;code&gt;-al&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;由&lt;code&gt;|&lt;/code&gt;分开的几个选项，表示只能从几个选项中选择一个&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&quot;Description&quot;&gt;&lt;a href=&quot;#Description&quot; class=&quot;headerlink&quot; title=&quot;Description&quot;&gt;&lt;/a&gt;Description&lt;/h5&gt;&lt;p&gt;一般描述中会列举参数的详细含义&lt;/p&gt;
+&lt;h2 id=&quot;基本指令&quot;&gt;&lt;a href=&quot;#基本指令&quot; class=&quot;headerlink&quot; title=&quot;基本指令&quot;&gt;&lt;/a&gt;基本指令&lt;/h2&gt;&lt;p&gt;在这里，主要介绍基于文件增删查改的指令&lt;/p&gt;
+&lt;h3 id=&quot;ls指令&quot;&gt;&lt;a href=&quot;#ls指令&quot; class=&quot;headerlink&quot; title=&quot;ls指令&quot;&gt;&lt;/a&gt;ls指令&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;ls [OPTION]… [FILE]…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;列出目录下的文件，常用的用法有：&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ ls --color 以彩色显示档案 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ ls &lt;span class=&quot;operator&quot;&gt;-l&lt;/span&gt;     显示详细资料 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ ls &lt;span class=&quot;operator&quot;&gt;-a&lt;/span&gt;     显示隐藏档案 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ ls -al    同时显示隐藏档案与详细资料&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&quot;cp指令&quot;&gt;&lt;a href=&quot;#cp指令&quot; class=&quot;headerlink&quot; title=&quot;cp指令&quot;&gt;&lt;/a&gt;cp指令&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;cp [OPTION]… [-T] SOURCE DEST&lt;br&gt;cp [OPTION]… SOURCE… DIRECTORY&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;将一个或多个文件进行拷贝，常用的用法有：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ cp &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;.txt &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;.txt 	复制&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;.txt,并重命名为&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;.txt &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ cp &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;.txt ./dir/	将&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;.txt复制到dir目录下&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ cp &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;.txt &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;.txt ./dir	将两个文件复制到dir目录下&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;mv指令&quot;&gt;&lt;a href=&quot;#mv指令&quot; class=&quot;headerlink&quot; title=&quot;mv指令&quot;&gt;&lt;/a&gt;mv指令&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;mv [OPTION]… [-T] SOURCE DEST&lt;br&gt;mv [OPTION]… SOURCE… DIRECTORY&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;将一个或多个文件进行移动。我们会发现&lt;code&gt;cp&lt;/code&gt;和&lt;code&gt;mv&lt;/code&gt;的指令结构完全一致，常用的用法有：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ mv &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;.txt &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;.txt 	移动&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;.txt,并重命名为&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;.txt &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ mv &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;.txt ./dir/	将&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;.txt移动到dir目录下&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ mv &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;.txt &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;.txt ./dir	将两个文件移动到dir目录下&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;rm指令&quot;&gt;&lt;a href=&quot;#rm指令&quot; class=&quot;headerlink&quot; title=&quot;rm指令&quot;&gt;&lt;/a&gt;rm指令&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;cp [OPTION]… FILE…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;将一个或多个文件进行删除，常用的用法有：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ rm -rf directory 将文件夹下的所有文件强制删除&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;pwd指令&quot;&gt;&lt;a href=&quot;#pwd指令&quot; class=&quot;headerlink&quot; title=&quot;pwd指令&quot;&gt;&lt;/a&gt;pwd指令&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;pwd [OPTION]…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;显示当前的文件目录&lt;/p&gt;
+&lt;h3 id=&quot;cat指令&quot;&gt;&lt;a href=&quot;#cat指令&quot; class=&quot;headerlink&quot; title=&quot;cat指令&quot;&gt;&lt;/a&gt;cat指令&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;cat [OPTION]… [FILE]…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;列出文件的内容，但配合&lt;code&gt;重定向符号&lt;/code&gt;有很多种用法。常用的用法有：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ cat &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;.txt 	列出&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;.txt里的内容 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ cat &amp;gt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;.txt   将后面输入的内容存入&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;.txt&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;高级指令&quot;&gt;&lt;a href=&quot;#高级指令&quot; class=&quot;headerlink&quot; title=&quot;高级指令&quot;&gt;&lt;/a&gt;高级指令&lt;/h2&gt;&lt;p&gt;grep awk sed cut&lt;/p&gt;
+&lt;h3 id=&quot;find指令&quot;&gt;&lt;a href=&quot;#find指令&quot; class=&quot;headerlink&quot; title=&quot;find指令&quot;&gt;&lt;/a&gt;find指令&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt; find [-H] [-L] [-P] [-Olevel] [-D help|tree|search|stat|rates|opt|exec] [path…] [expression]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;但是&lt;code&gt;[-H] [-L] [-P] [-Olevel] [-D help|tree|search|stat|rates|opt|exec]&lt;/code&gt;并不常用，因此指令可以简化为&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;find [path…] [experssion]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;该指令执行查找，常用的用法有：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ find . -name file.txt	在当前目录下搜索文件file.txt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ find . -name &lt;span class=&quot;string&quot;&gt;&quot;*.txt&quot;&lt;/span&gt; 	在当前目录下搜索所有txt文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ find . -perm &lt;span class=&quot;number&quot;&gt;755&lt;/span&gt; 		在当前目录下查找权限为&lt;span class=&quot;number&quot;&gt;755&lt;/span&gt;的文件&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;chmod指令&quot;&gt;&lt;a href=&quot;#chmod指令&quot; class=&quot;headerlink&quot; title=&quot;chmod指令&quot;&gt;&lt;/a&gt;chmod指令&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;chmod [OPTION]… MODE[,MODE]… FILE…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;修改一个或多个文件的权限，常用的用法有：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ chmod &lt;span class=&quot;number&quot;&gt;777&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;.txt 将&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;.txt权限修改为&lt;span class=&quot;number&quot;&gt;777&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;￥ chmod a+x &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;.txt &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;.txt 给两个文件的所有用户添加执行权限&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;要注意[ugoa]的含义。u-&amp;gt;owner, g-&amp;gt;group, o-&amp;gt;other, a-&amp;gt;all&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;grep指令&quot;&gt;&lt;a href=&quot;#grep指令&quot; class=&quot;headerlink&quot; title=&quot;grep指令&quot;&gt;&lt;/a&gt;grep指令&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt; grep [OPTION]… PATTERN [FILE]…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在FILE的每一行中，查找满足PATTERN的行并输出：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ ls | grep &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;.txt 		在当前路径中查找似乎否有&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;.txt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ grep &lt;span class=&quot;string&quot;&gt;&#39;[^0-9]&#39;&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;.txt	在&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;.txt种查找包含非数字的行&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;awk指令&quot;&gt;&lt;a href=&quot;#awk指令&quot; class=&quot;headerlink&quot; title=&quot;awk指令&quot;&gt;&lt;/a&gt;awk指令&lt;/h3&gt;&lt;p&gt;awk 指令比较复杂，但是也特别灵活。今后有时间会详细写一下，这里只列举几个例子&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ awk &amp;lt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;.csv -F, &lt;span class=&quot;string&quot;&gt;&#39;&amp;#123;print $7&amp;#125;&#39;&lt;/span&gt;  将文件&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;.csv的每一行按照&lt;span class=&quot;string&quot;&gt;&#39;,&#39;&lt;/span&gt;分割，输出第七列&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;再来一个复杂的例子&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cat &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;.csv | awk &lt;span class=&quot;string&quot;&gt;&#39;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  BEGIN &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    maxCount = 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    id;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    FS = &quot;,&quot;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    count[$5]+=$13;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    name[$5] = $7;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  END &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    for (c in count) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      if (count[c] &amp;gt; maxCount) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        maxCount = count[c];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        id = c;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    print name[id];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;如果在2.csv种，第5列表示id，第7列表示名字，第13列表示销量。那么该代码表示找到总销量最多的id，并输出其中的一个名字。&lt;/p&gt;
+&lt;p&gt;感觉awk写复杂了就是c语言代码了。&lt;/p&gt;
+&lt;h3 id=&quot;cut指令&quot;&gt;&lt;a href=&quot;#cut指令&quot; class=&quot;headerlink&quot; title=&quot;cut指令&quot;&gt;&lt;/a&gt;cut指令&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt; cut OPTION… [FILE]…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;从文件中截取特订的列，常见的用法有：&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ cut &lt;span class=&quot;operator&quot;&gt;-d&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&#39;,&#39;&lt;/span&gt; &lt;span class=&quot;operator&quot;&gt;-f&lt;/span&gt;1 file.txt		将file.txt已逗号分隔，输出第一列&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ find -c1-&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt; file.txt		输出file.txt的前三列&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&quot;sed指令&quot;&gt;&lt;a href=&quot;#sed指令&quot; class=&quot;headerlink&quot; title=&quot;sed指令&quot;&gt;&lt;/a&gt;sed指令&lt;/h3&gt;&lt;p&gt;该指令也是一个比较复杂的指令，暂不介绍。&lt;/p&gt;
+&lt;h2 id=&quot;系统指令&quot;&gt;&lt;a href=&quot;#系统指令&quot; class=&quot;headerlink&quot; title=&quot;系统指令&quot;&gt;&lt;/a&gt;系统指令&lt;/h2&gt;&lt;h3 id=&quot;ps指令&quot;&gt;&lt;a href=&quot;#ps指令&quot; class=&quot;headerlink&quot; title=&quot;ps指令&quot;&gt;&lt;/a&gt;ps指令&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt; ps [OPTIONS]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;查看当前进程，通常和grep一起用：&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ ps | grep bash 	查看名为bash的进程&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&quot;kill指令&quot;&gt;&lt;a href=&quot;#kill指令&quot; class=&quot;headerlink&quot; title=&quot;kill指令&quot;&gt;&lt;/a&gt;kill指令&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt; kill [-s signal|-p] [–] pid…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;向pid进程发送信号&lt;/p&gt;
+&lt;h3 id=&quot;telent指令&quot;&gt;&lt;a href=&quot;#telent指令&quot; class=&quot;headerlink&quot; title=&quot;telent指令&quot;&gt;&lt;/a&gt;telent指令&lt;/h3&gt;&lt;p&gt;用于和主机通信的指令，通常用于诊断服务器&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ telent myhost.com&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ telent &lt;span class=&quot;operator&quot;&gt;-l&lt;/span&gt; myusername myhost.com:&lt;span class=&quot;number&quot;&gt;5555&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;parted指令&quot;&gt;&lt;a href=&quot;#parted指令&quot; class=&quot;headerlink&quot; title=&quot;parted指令&quot;&gt;&lt;/a&gt;parted指令&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;parted [options] [device [command [options…]…]]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;查看或操作分区，常用的指令：&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ parted &lt;span class=&quot;operator&quot;&gt;-l&lt;/span&gt; 列出所有的磁盘分区&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;常用Linux指令的学习与整理&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="tutorials" scheme="http://yoursite.com/categories/tutorials/"/>
+    
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo简明教程</title>
