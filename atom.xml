@@ -1,35 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
-  
+  <title>Lei YU&#39;s blog</title>
+  <subtitle>Keep it simple, stupid</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-26T02:40:14.000Z</updated>
+  <updated>2016-02-26T02:16:13.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>Lei YU</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>testfile</title>
-    <link href="http://yoursite.com/2016/02/25/testfile/"/>
-    <id>http://yoursite.com/2016/02/25/testfile/</id>
-    <published>2016-02-26T02:40:14.000Z</published>
-    <updated>2016-02-26T02:40:14.000Z</updated>
-    
-    <content type="html"></content>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>Hello World</title>
