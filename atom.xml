@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-27T04:45:42.000Z</updated>
+  <updated>2016-02-27T04:51:53.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,11 +20,11 @@
     <link href="http://yoursite.com/2016/02/26/hexo-github-tutorial/"/>
     <id>http://yoursite.com/2016/02/26/hexo-github-tutorial/</id>
     <published>2016-02-27T03:21:12.000Z</published>
-    <updated>2016-02-27T04:45:42.000Z</updated>
+    <updated>2016-02-27T04:51:53.000Z</updated>
     
     <content type="html">&lt;p&gt;在这里，我将介绍如何使用Hexo在Github上搭建博客，也就是我们现在看到的博客。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;搭建环境&quot;&gt;&lt;a href=&quot;#搭建环境&quot; class=&quot;headerlink&quot; title=&quot;搭建环境&quot;&gt;&lt;/a&gt;搭建环境&lt;/h2&gt;&lt;p&gt;这里，主要介绍如何在windows系统上操作。但其实无论windows或是ios，其原理都是一样的&lt;/p&gt;
+&lt;h2 id=&quot;搭建环境&quot;&gt;&lt;a href=&quot;#搭建环境&quot; class=&quot;headerlink&quot; title=&quot;搭建环境&quot;&gt;&lt;/a&gt;搭建环境&lt;/h2&gt;&lt;p&gt;这里，主要介绍如何在windows系统上操作。但其实无论windows或是mac，其原理都是一样的&lt;/p&gt;
 &lt;h2 id=&quot;前期准备&quot;&gt;&lt;a href=&quot;#前期准备&quot; class=&quot;headerlink&quot; title=&quot;前期准备&quot;&gt;&lt;/a&gt;前期准备&lt;/h2&gt;&lt;p&gt;安装&lt;a href=&quot;https://nodejs.org/en/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Node.JS&lt;/a&gt;, &lt;a href=&quot;https://desktop.github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Github&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;Hexo安装与配置&quot;&gt;&lt;a href=&quot;#Hexo安装与配置&quot; class=&quot;headerlink&quot; title=&quot;Hexo安装与配置&quot;&gt;&lt;/a&gt;Hexo安装与配置&lt;/h2&gt;&lt;h3 id=&quot;安装Hexo&quot;&gt;&lt;a href=&quot;#安装Hexo&quot; class=&quot;headerlink&quot; title=&quot;安装Hexo&quot;&gt;&lt;/a&gt;安装Hexo&lt;/h3&gt;&lt;p&gt;首先，我们要安装&lt;code&gt;Hexo&lt;/code&gt;。双击&lt;code&gt;Git Shell&lt;/code&gt;,输入如下&lt;code&gt;npm&lt;/code&gt;指令&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-cli -g&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
