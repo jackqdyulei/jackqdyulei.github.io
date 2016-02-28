@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/02/27/linux-command/index.html">
 <meta property="og:site_name" content="Lei YU's blog">
 <meta property="og:description" content="常用Linux指令的学习与整理">
-<meta property="og:updated_time" content="2016-02-27T17:09:42.000Z">
+<meta property="og:updated_time" content="2016-02-27T17:17:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux指令学习">
 <meta name="twitter:description" content="常用Linux指令的学习与整理">
@@ -119,7 +119,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a>
+						<a href="/tags/architectural-styles/" style="font-size: 10px;">architectural styles</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a>
 					</div>
 				</section>
 				
@@ -282,8 +282,7 @@
 </blockquote>
 <p>列出文件的内容，但配合<code>重定向符号</code>有很多种用法。常用的用法有：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cat <span class="number">1</span>.txt 	列出<span class="number">1</span>.txt里的内容 </span><br><span class="line">$ cat &gt; <span class="number">2</span>.txt   将后面输入的内容存入<span class="number">2</span>.txt</span><br></pre></td></tr></table></figure>
-<h2 id="高级指令"><a href="#高级指令" class="headerlink" title="高级指令"></a>高级指令</h2><p>grep awk sed cut</p>
-<h3 id="find指令"><a href="#find指令" class="headerlink" title="find指令"></a>find指令</h3><blockquote>
+<h2 id="高级指令"><a href="#高级指令" class="headerlink" title="高级指令"></a>高级指令</h2><h3 id="find指令"><a href="#find指令" class="headerlink" title="find指令"></a>find指令</h3><blockquote>
 <p> find [-H] [-L] [-P] [-Olevel] [-D help|tree|search|stat|rates|opt|exec] [path…] [expression]</p>
 </blockquote>
 <p>但是<code>[-H] [-L] [-P] [-Olevel] [-D help|tree|search|stat|rates|opt|exec]</code>并不常用，因此指令可以简化为</p>
@@ -291,12 +290,12 @@
 <p>find [path…] [experssion]</p>
 </blockquote>
 <p>该指令执行查找，常用的用法有：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ find . -name file.txt	在当前目录下搜索文件file.txt</span><br><span class="line">$ find . -name <span class="string">"*.txt"</span> 	在当前目录下搜索所有txt文件</span><br><span class="line">$ find . -perm <span class="number">755</span> 		在当前目录下查找权限为<span class="number">755</span>的文件</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ find . -name file.txt    在当前目录下搜索文件file.txt</span><br><span class="line">$ find . -name <span class="string">"*.txt"</span>     在当前目录下搜索所有txt文件</span><br><span class="line">$ find . -perm <span class="number">755</span>         在当前目录下查找权限为<span class="number">755</span>的文件</span><br></pre></td></tr></table></figure>
 <h3 id="chmod指令"><a href="#chmod指令" class="headerlink" title="chmod指令"></a>chmod指令</h3><blockquote>
 <p>chmod [OPTION]… MODE[,MODE]… FILE…</p>
 </blockquote>
 <p>修改一个或多个文件的权限，常用的用法有：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ chmod <span class="number">777</span> <span class="number">1</span>.txt 将<span class="number">1</span>.txt权限修改为<span class="number">777</span></span><br><span class="line">￥ chmod a+x <span class="number">1</span>.txt <span class="number">2</span>.txt 给两个文件的所有用户添加执行权限</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ chmod <span class="number">777</span> <span class="number">1</span>.txt           将<span class="number">1</span>.txt权限修改为<span class="number">777</span></span><br><span class="line">￥ chmod a+x <span class="number">1</span>.txt <span class="number">2</span>.txt    给两个文件的所有用户添加执行权限</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>要注意[ugoa]的含义。u-&gt;owner, g-&gt;group, o-&gt;other, a-&gt;all</p>
 </blockquote>
@@ -304,7 +303,7 @@
 <p> grep [OPTION]… PATTERN [FILE]…</p>
 </blockquote>
 <p>在FILE的每一行中，查找满足PATTERN的行并输出：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ls | grep <span class="number">2</span>.txt 		在当前路径中查找似乎否有<span class="number">2</span>.txt</span><br><span class="line">$ grep <span class="string">'[^0-9]'</span> <span class="number">3</span>.txt	在<span class="number">3</span>.txt种查找包含非数字的行</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ls | grep <span class="number">2</span>.txt        在当前路径中查找似乎否有<span class="number">2</span>.txt</span><br><span class="line">$ grep <span class="string">'[^0-9]'</span> <span class="number">3</span>.txt    在<span class="number">3</span>.txt种查找包含非数字的行</span><br></pre></td></tr></table></figure>
 <h3 id="awk指令"><a href="#awk指令" class="headerlink" title="awk指令"></a>awk指令</h3><p>awk 指令比较复杂，但是也特别灵活。今后有时间会详细写一下，这里只列举几个例子<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ awk &lt; <span class="number">1</span>.csv -F, <span class="string">'&#123;print $7&#125;'</span>  将文件<span class="number">1</span>.csv的每一行按照<span class="string">','</span>分割，输出第七列</span><br></pre></td></tr></table></figure></p>
 <p>再来一个复杂的例子<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">cat <span class="number">2</span>.csv | awk <span class="string">'</span><br><span class="line">  BEGIN &#123;</span><br><span class="line">    maxCount = 0;</span><br><span class="line">    id;</span><br><span class="line">    FS = ",";</span><br><span class="line">  &#125;</span><br><span class="line">  &#123;</span><br><span class="line">    count[$5]+=$13;</span><br><span class="line">    name[$5] = $7;</span><br><span class="line">  &#125;</span><br><span class="line">  END &#123;</span><br><span class="line">    for (c in count) &#123;</span><br><span class="line">      if (count[c] &gt; maxCount) &#123;</span><br><span class="line">        maxCount = count[c];</span><br><span class="line">        id = c;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    print name[id];</span><br><span class="line">  &#125;</span><br><span class="line">'</span></span><br></pre></td></tr></table></figure></p>
 <p>如果在2.csv种，第5列表示id，第7列表示名字，第13列表示销量。那么该代码表示找到总销量最多的id，并输出其中的一个名字。</p>
@@ -336,6 +335,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2016/02/27/architectural-styles/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Architectural Styles介绍
+        
+      </div>
+    </a>
   
   
     <a href="/2016/02/26/hexo-github-tutorial/" id="article-nav-older" class="article-nav-link-wrap">
