@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-28T17:25:43.000Z</updated>
+  <updated>2016-02-29T16:17:17.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,122 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>confusion-matrix-lightside</title>
+    <link href="http://yoursite.com/2016/02/29/confusion-matrix-lightside/"/>
+    <id>http://yoursite.com/2016/02/29/confusion-matrix-lightside/</id>
+    <published>2016-02-29T16:17:17.000Z</published>
+    <updated>2016-02-29T16:17:17.000Z</updated>
+    
+    <content type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>midterm-18653</title>
+    <link href="http://yoursite.com/2016/02/28/midterm-18653/"/>
+    <id>http://yoursite.com/2016/02/28/midterm-18653/</id>
+    <published>2016-02-29T04:25:28.000Z</published>
+    <updated>2016-02-29T20:55:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;有关18653-Software Architecture and Design的期中考试复习&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;Basic-questions&quot;&gt;&lt;a href=&quot;#Basic-questions&quot; class=&quot;headerlink&quot; title=&quot;Basic questions&quot;&gt;&lt;/a&gt;Basic questions&lt;/h2&gt;&lt;h3 id=&quot;What-is-Software-Architecture&quot;&gt;&lt;a href=&quot;#What-is-Software-Architecture&quot; class=&quot;headerlink&quot; title=&quot;What is Software Architecture&quot;&gt;&lt;/a&gt;What is Software Architecture&lt;/h3&gt;&lt;p&gt;Software architecture is a level of design that involves&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the description of elements from which systems are bulit&lt;/li&gt;
+&lt;li&gt;interactions among those elements&lt;/li&gt;
+&lt;li&gt;patterns that guide their composition&lt;/li&gt;
+&lt;li&gt;constraints on these patterns&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Why-software-architecture-is-important&quot;&gt;&lt;a href=&quot;#Why-software-architecture-is-important&quot; class=&quot;headerlink&quot; title=&quot;Why software architecture is important&quot;&gt;&lt;/a&gt;Why software architecture is important&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;It has been proved useful for families of system.&lt;/li&gt;
+&lt;li&gt;It can make the complex system flexible and well organized&lt;h3 id=&quot;Various-view-points&quot;&gt;&lt;a href=&quot;#Various-view-points&quot; class=&quot;headerlink&quot; title=&quot;Various view points&quot;&gt;&lt;/a&gt;Various view points&lt;/h3&gt;&lt;h4 id=&quot;4-1-Views&quot;&gt;&lt;a href=&quot;#4-1-Views&quot; class=&quot;headerlink&quot; title=&quot;4+1 Views&quot;&gt;&lt;/a&gt;4+1 Views&lt;/h4&gt;&lt;/li&gt;
+&lt;li&gt;Function View: Show the component diagram, including interfaces and dependencies.&lt;/li&gt;
+&lt;li&gt;Information View: Show the schema, data models and data flows.&lt;/li&gt;
+&lt;li&gt;Deployment View: Where to deploy the software components&lt;/li&gt;
+&lt;li&gt;Development View: main software packages&lt;/li&gt;
+&lt;li&gt;Concurrency View: How do we ensure data consistency in the distributed system&lt;h3 id=&quot;What-does-it-mean-by-architecture-through-software-lifecycle&quot;&gt;&lt;a href=&quot;#What-does-it-mean-by-architecture-through-software-lifecycle&quot; class=&quot;headerlink&quot; title=&quot;What does it mean by architecture through software lifecycle?&quot;&gt;&lt;/a&gt;What does it mean by architecture through software lifecycle?&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;Requirements&lt;/li&gt;
+&lt;li&gt;Design&lt;/li&gt;
+&lt;li&gt;Implementation&lt;/li&gt;
+&lt;li&gt;Analysis and Testing&lt;/li&gt;
+&lt;li&gt;Evolution&lt;/li&gt;
+&lt;li&gt;Development Process&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Will-architecture-design-allow-creativity&quot;&gt;&lt;a href=&quot;#Will-architecture-design-allow-creativity&quot; class=&quot;headerlink&quot; title=&quot;Will architecture design allow creativity?&quot;&gt;&lt;/a&gt;Will architecture design allow creativity?&lt;/h3&gt;&lt;p&gt;Yes&lt;/p&gt;
+&lt;h3 id=&quot;Stakeholders&quot;&gt;&lt;a href=&quot;#Stakeholders&quot; class=&quot;headerlink&quot; title=&quot;Stakeholders&quot;&gt;&lt;/a&gt;Stakeholders&lt;/h3&gt;&lt;p&gt;Architects, Developers, Testers, Managers, Customers, Users, Vendors&lt;/p&gt;
+&lt;h2 id=&quot;Basic-elements&quot;&gt;&lt;a href=&quot;#Basic-elements&quot; class=&quot;headerlink&quot; title=&quot;Basic elements&quot;&gt;&lt;/a&gt;Basic elements&lt;/h2&gt;&lt;h3 id=&quot;Component&quot;&gt;&lt;a href=&quot;#Component&quot; class=&quot;headerlink&quot; title=&quot;Component&quot;&gt;&lt;/a&gt;Component&lt;/h3&gt;&lt;h4 id=&quot;Defination&quot;&gt;&lt;a href=&quot;#Defination&quot; class=&quot;headerlink&quot; title=&quot;Defination&quot;&gt;&lt;/a&gt;Defination&lt;/h4&gt;&lt;p&gt;A software component is an architectural entity that&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;encapsulates a subset of the system’s functionality and data&lt;/li&gt;
+&lt;li&gt;restricts access to that subset&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Connector&quot;&gt;&lt;a href=&quot;#Connector&quot; class=&quot;headerlink&quot; title=&quot;Connector&quot;&gt;&lt;/a&gt;Connector&lt;/h3&gt;&lt;h4 id=&quot;Defination-1&quot;&gt;&lt;a href=&quot;#Defination-1&quot; class=&quot;headerlink&quot; title=&quot;Defination&quot;&gt;&lt;/a&gt;Defination&lt;/h4&gt;&lt;p&gt;A &lt;strong&gt;software connector&lt;/strong&gt; is an architectural building block tasked with effecting and regulating interactions among components&lt;/p&gt;
+&lt;h4 id=&quot;Taxonomy&quot;&gt;&lt;a href=&quot;#Taxonomy&quot; class=&quot;headerlink&quot; title=&quot;Taxonomy&quot;&gt;&lt;/a&gt;Taxonomy&lt;/h4&gt;&lt;h5 id=&quot;4-main-roles&quot;&gt;&lt;a href=&quot;#4-main-roles&quot; class=&quot;headerlink&quot; title=&quot;4 main roles&quot;&gt;&lt;/a&gt;4 main roles&lt;/h5&gt;&lt;p&gt;Communication, Conversion, Facilitation, Coordination&lt;/p&gt;
+&lt;h5 id=&quot;8-main-types&quot;&gt;&lt;a href=&quot;#8-main-types&quot; class=&quot;headerlink&quot; title=&quot;8 main types&quot;&gt;&lt;/a&gt;8 main types&lt;/h5&gt;&lt;p&gt;Event, Stream, Procedure Call, Arbitrator, Data Access, Distributor, Linkage, Adaptor&lt;/p&gt;
+&lt;h4 id=&quot;Benefits-of-first-class-connectors&quot;&gt;&lt;a href=&quot;#Benefits-of-first-class-connectors&quot; class=&quot;headerlink&quot; title=&quot;Benefits of first-class connectors&quot;&gt;&lt;/a&gt;Benefits of first-class connectors&lt;/h4&gt;&lt;p&gt;Software evolution, separation of concerns, modularity, pluggability&lt;/p&gt;
+&lt;h3 id=&quot;Configuration&quot;&gt;&lt;a href=&quot;#Configuration&quot; class=&quot;headerlink&quot; title=&quot;Configuration&quot;&gt;&lt;/a&gt;Configuration&lt;/h3&gt;&lt;p&gt;An architectural configuration, or topology, is a set of specific associations between the components and connectors of a software system’s architecture&lt;/p&gt;
+&lt;h2 id=&quot;Architectural-sytles-and-patterns&quot;&gt;&lt;a href=&quot;#Architectural-sytles-and-patterns&quot; class=&quot;headerlink&quot; title=&quot;Architectural sytles and patterns&quot;&gt;&lt;/a&gt;Architectural sytles and patterns&lt;/h2&gt;&lt;h3 id=&quot;Architectural-sytles&quot;&gt;&lt;a href=&quot;#Architectural-sytles&quot; class=&quot;headerlink&quot; title=&quot;Architectural sytles&quot;&gt;&lt;/a&gt;Architectural sytles&lt;/h3&gt;&lt;h4 id=&quot;Defination-2&quot;&gt;&lt;a href=&quot;#Defination-2&quot; class=&quot;headerlink&quot; title=&quot;Defination&quot;&gt;&lt;/a&gt;Defination&lt;/h4&gt;&lt;p&gt;Codify key constraints and architectural elements (components, connectors, configurations) found effective used in a family of software systems over a given time period&lt;/p&gt;
+&lt;h4 id=&quot;Example&quot;&gt;&lt;a href=&quot;#Example&quot; class=&quot;headerlink&quot; title=&quot;Example&quot;&gt;&lt;/a&gt;Example&lt;/h4&gt;&lt;p&gt;详见另一篇文章。&lt;/p&gt;
+&lt;h3 id=&quot;Architectural-patterns&quot;&gt;&lt;a href=&quot;#Architectural-patterns&quot; class=&quot;headerlink&quot; title=&quot;Architectural patterns&quot;&gt;&lt;/a&gt;Architectural patterns&lt;/h3&gt;&lt;h4 id=&quot;Defination-3&quot;&gt;&lt;a href=&quot;#Defination-3&quot; class=&quot;headerlink&quot; title=&quot;Defination&quot;&gt;&lt;/a&gt;Defination&lt;/h4&gt;&lt;p&gt;A set of architectural design decisions that are applicable to a recurring design problem, and parameterized to account for different software development contexts in which that problem appears.&lt;/p&gt;
+&lt;h3 id=&quot;Example-1&quot;&gt;&lt;a href=&quot;#Example-1&quot; class=&quot;headerlink&quot; title=&quot;Example&quot;&gt;&lt;/a&gt;Example&lt;/h3&gt;&lt;p&gt;3-tier (Stage-Logic-Display), MVC, Sense Compute Control&lt;/p&gt;
+&lt;h3 id=&quot;Comparisons-of-style-and-pattern&quot;&gt;&lt;a href=&quot;#Comparisons-of-style-and-pattern&quot; class=&quot;headerlink&quot; title=&quot;Comparisons of style and pattern&quot;&gt;&lt;/a&gt;Comparisons of style and pattern&lt;/h3&gt;&lt;p&gt;Compared to styles, architectural patterns are at a &lt;strong&gt;coarser level of granularity&lt;/strong&gt; (design decisions versus actual architectural elements) and are inherently more &lt;strong&gt;domain specific&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Methods-of-evaluating-design-methods-like-styles-and-patterns&quot;&gt;&lt;a href=&quot;#Methods-of-evaluating-design-methods-like-styles-and-patterns&quot; class=&quot;headerlink&quot; title=&quot;Methods of evaluating design methods like styles and patterns&quot;&gt;&lt;/a&gt;Methods of evaluating design methods like styles and patterns&lt;/h3&gt;&lt;p&gt;Vocabulary, structural patterns, computational model, invariants, common examples, disadvantages, specializations&lt;/p&gt;
+&lt;h3 id=&quot;Methods-of-design&quot;&gt;&lt;a href=&quot;#Methods-of-design&quot; class=&quot;headerlink&quot; title=&quot;Methods of design&quot;&gt;&lt;/a&gt;Methods of design&lt;/h3&gt;&lt;h4 id=&quot;Greenfield-design&quot;&gt;&lt;a href=&quot;#Greenfield-design&quot; class=&quot;headerlink&quot; title=&quot;Greenfield design&quot;&gt;&lt;/a&gt;Greenfield design&lt;/h4&gt;&lt;p&gt;这里指的是大家对一个领域都没有经验，就需要用一系列方法不断学习或者试错找出最优解，常用的方法有：&lt;br&gt;Analogy searching, Brainstorming, Literature searching, Morphological Charts, Removing Mental Blocks, Insight from requirements/implementation&lt;/p&gt;
+&lt;h2 id=&quot;Architectural-Modeling&quot;&gt;&lt;a href=&quot;#Architectural-Modeling&quot; class=&quot;headerlink&quot; title=&quot;Architectural Modeling&quot;&gt;&lt;/a&gt;Architectural Modeling&lt;/h2&gt;&lt;h3 id=&quot;Defination-4&quot;&gt;&lt;a href=&quot;#Defination-4&quot; class=&quot;headerlink&quot; title=&quot;Defination&quot;&gt;&lt;/a&gt;Defination&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;An architectural model is an artifact that captures some or all of the design decisions that comprise a system’s architecture&lt;/li&gt;
+&lt;li&gt;Architectural modeling is the reification and documentation of those design decisions&lt;h3 id=&quot;How-to-choose-what-to-model&quot;&gt;&lt;a href=&quot;#How-to-choose-what-to-model&quot; class=&quot;headerlink&quot; title=&quot;How to choose what to model?&quot;&gt;&lt;/a&gt;How to choose what to model?&lt;/h3&gt;Cost/Benefit Decision&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;What-do-we-model&quot;&gt;&lt;a href=&quot;#What-do-we-model&quot; class=&quot;headerlink&quot; title=&quot;What do we model?&quot;&gt;&lt;/a&gt;What do we model?&lt;/h3&gt;&lt;p&gt;Structure (Architectural element), static/dynamic behaviors, functional/non-functional aspects, Views/Viewpoints&lt;/p&gt;
+&lt;h3 id=&quot;Important-things-to-“get-right”&quot;&gt;&lt;a href=&quot;#Important-things-to-“get-right”&quot; class=&quot;headerlink&quot; title=&quot;Important things to “get right”&quot;&gt;&lt;/a&gt;Important things to “get right”&lt;/h3&gt;&lt;p&gt;Consistency, Accuracy/Precision, Ambiguity&lt;/p&gt;
+&lt;h3 id=&quot;How-do-we-evaluate-modeling-techniques&quot;&gt;&lt;a href=&quot;#How-do-we-evaluate-modeling-techniques&quot; class=&quot;headerlink&quot; title=&quot;How do we evaluate modeling techniques?&quot;&gt;&lt;/a&gt;How do we evaluate modeling techniques?&lt;/h3&gt;&lt;p&gt;Scope/Purpose, Basic Elements, Style, Static/Dynamic Aspects, Dynamic Modeling&lt;/p&gt;
+&lt;h2 id=&quot;Service-Oriented-Architecture&quot;&gt;&lt;a href=&quot;#Service-Oriented-Architecture&quot; class=&quot;headerlink&quot; title=&quot;Service Oriented Architecture&quot;&gt;&lt;/a&gt;Service Oriented Architecture&lt;/h2&gt;&lt;h2 id=&quot;ATAM&quot;&gt;&lt;a href=&quot;#ATAM&quot; class=&quot;headerlink&quot; title=&quot;ATAM&quot;&gt;&lt;/a&gt;ATAM&lt;/h2&gt;&lt;h3 id=&quot;9-steps&quot;&gt;&lt;a href=&quot;#9-steps&quot; class=&quot;headerlink&quot; title=&quot;9 steps&quot;&gt;&lt;/a&gt;9 steps&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Step 1: Present ATAM&lt;/li&gt;
+&lt;li&gt;Step 2: Present Business Drivers&lt;/li&gt;
+&lt;li&gt;Step 3: Present the Architecture&lt;/li&gt;
+&lt;li&gt;Step 4: Identify Architectural Approaches&lt;/li&gt;
+&lt;li&gt;Step 5: Generate Utility Tree and scenario&lt;/li&gt;
+&lt;li&gt;Step 6: Analyze Architectural Approaches&lt;/li&gt;
+&lt;li&gt;Step 7: Brainstorm &amp;amp; Prioritize Scenarios&lt;/li&gt;
+&lt;li&gt;Step 8: Analyze Architectural Approaches&lt;/li&gt;
+&lt;li&gt;Step 9: Present ATAM results&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;People-Roles-and-Teams&quot;&gt;&lt;a href=&quot;#People-Roles-and-Teams&quot; class=&quot;headerlink&quot; title=&quot;People, Roles and Teams&quot;&gt;&lt;/a&gt;People, Roles and Teams&lt;/h2&gt;&lt;h3 id=&quot;Architect-desired-skills&quot;&gt;&lt;a href=&quot;#Architect-desired-skills&quot; class=&quot;headerlink&quot; title=&quot;Architect desired skills&quot;&gt;&lt;/a&gt;Architect desired skills&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Software development expertise&lt;/li&gt;
+&lt;li&gt;Domain expertise&lt;/li&gt;
+&lt;li&gt;Communicator&lt;/li&gt;
+&lt;li&gt;Strategist&lt;/li&gt;
+&lt;li&gt;Consultant&lt;/li&gt;
+&lt;li&gt;Leader&lt;/li&gt;
+&lt;li&gt;Technologist&lt;/li&gt;
+&lt;li&gt;Cost estimator&lt;/li&gt;
+&lt;li&gt;Cheerleader&lt;/li&gt;
+&lt;li&gt;Politician&lt;/li&gt;
+&lt;li&gt;Salesperson&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;有关18653-Software Architecture and Design的期中考试复习&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="course notes" scheme="http://yoursite.com/categories/course-notes/"/>
+    
+    
+      <category term="18653" scheme="http://yoursite.com/tags/18653/"/>
+    
+  </entry>
   
   <entry>
     <title>Architectural Styles介绍</title>
