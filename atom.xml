@@ -40,7 +40,7 @@
     <link href="http://yoursite.com/2016/02/28/midterm-18653/"/>
     <id>http://yoursite.com/2016/02/28/midterm-18653/</id>
     <published>2016-02-29T04:25:28.000Z</published>
-    <updated>2016-03-03T02:54:16.000Z</updated>
+    <updated>2016-03-03T03:55:02.000Z</updated>
     
     <content type="html">&lt;p&gt;有关18653-Software Architecture and Design的期中考试复习&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -136,16 +136,46 @@
 &lt;/ul&gt;
 &lt;!-- ![](./2016-02-28-midterm-18653/soa-ra.jpg) --&gt;
 &lt;img src=&quot;/2016/02/28/midterm-18653/soa-ra.jpg&quot; alt=&quot;soa-ra.jpg&quot; title=&quot;&quot;&gt;
-&lt;h2 id=&quot;ATAM&quot;&gt;&lt;a href=&quot;#ATAM&quot; class=&quot;headerlink&quot; title=&quot;ATAM&quot;&gt;&lt;/a&gt;ATAM&lt;/h2&gt;&lt;h3 id=&quot;9-steps&quot;&gt;&lt;a href=&quot;#9-steps&quot; class=&quot;headerlink&quot; title=&quot;9 steps&quot;&gt;&lt;/a&gt;9 steps&lt;/h3&gt;&lt;ul&gt;
+&lt;h2 id=&quot;ATAM&quot;&gt;&lt;a href=&quot;#ATAM&quot; class=&quot;headerlink&quot; title=&quot;ATAM&quot;&gt;&lt;/a&gt;ATAM&lt;/h2&gt;&lt;h3 id=&quot;Quality-attribute&quot;&gt;&lt;a href=&quot;#Quality-attribute&quot; class=&quot;headerlink&quot; title=&quot;Quality attribute&quot;&gt;&lt;/a&gt;Quality attribute&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Performance&lt;/li&gt;
+&lt;li&gt;Modifiablity&lt;/li&gt;
+&lt;li&gt;Availability&lt;/li&gt;
+&lt;li&gt;Security&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;9-steps&quot;&gt;&lt;a href=&quot;#9-steps&quot; class=&quot;headerlink&quot; title=&quot;9 steps&quot;&gt;&lt;/a&gt;9 steps&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;Step 1: Present ATAM&lt;/li&gt;
-&lt;li&gt;Step 2: Present Business Drivers&lt;/li&gt;
-&lt;li&gt;Step 3: Present the Architecture&lt;/li&gt;
-&lt;li&gt;Step 4: Identify Architectural Approaches&lt;/li&gt;
+&lt;li&gt;Step 2: Present Business Drivers&lt;ul&gt;
+&lt;li&gt;Business context for the system&lt;/li&gt;
+&lt;li&gt;High-level functional requirements&lt;/li&gt;
+&lt;li&gt;High-level quality attribute requirements&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Step 3: Present the Architecture&lt;ul&gt;
+&lt;li&gt;Technical constraints such as an OS, hardware&lt;/li&gt;
+&lt;li&gt;Architectural styles used to address quality attribute requirements&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Step 4: Identify Architectural Approaches&lt;ul&gt;
+&lt;li&gt;client-server, 3-tier, proxy, publish-subscribe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Step 5: Generate Utility Tree and scenario&lt;/li&gt;
-&lt;li&gt;Step 6: Analyze Architectural Approaches&lt;/li&gt;
+&lt;li&gt;Step 6: Analyze Architectural Approaches&lt;ul&gt;
+&lt;li&gt;risk &amp;amp; non-risk&lt;/li&gt;
+&lt;li&gt;sensitivity: A property of a component that is critical to success of system&lt;/li&gt;
+&lt;li&gt;tradoff: A property taht affects more than one attribute or sensitivity point&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Step 7: Brainstorm &amp;amp; Prioritize Scenarios&lt;/li&gt;
 &lt;li&gt;Step 8: Analyze Architectural Approaches&lt;/li&gt;
-&lt;li&gt;Step 9: Present ATAM results&lt;/li&gt;
+&lt;li&gt;Step 9: Present ATAM results&lt;ul&gt;
+&lt;li&gt;Architectural approaches&lt;/li&gt;
+&lt;li&gt;Utility tree&lt;/li&gt;
+&lt;li&gt;Scenarios&lt;/li&gt;
+&lt;li&gt;Risk and non-risks&lt;/li&gt;
+&lt;li&gt;Sensitivity points and tradeoffs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;People-Roles-and-Teams&quot;&gt;&lt;a href=&quot;#People-Roles-and-Teams&quot; class=&quot;headerlink&quot; title=&quot;People, Roles and Teams&quot;&gt;&lt;/a&gt;People, Roles and Teams&lt;/h2&gt;&lt;h3 id=&quot;Architect-desired-skills&quot;&gt;&lt;a href=&quot;#Architect-desired-skills&quot; class=&quot;headerlink&quot; title=&quot;Architect desired skills&quot;&gt;&lt;/a&gt;Architect desired skills&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;Software development expertise&lt;/li&gt;
