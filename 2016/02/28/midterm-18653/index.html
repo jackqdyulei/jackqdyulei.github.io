@@ -12,7 +12,8 @@
 <meta property="og:url" content="http://yoursite.com/2016/02/28/midterm-18653/index.html">
 <meta property="og:site_name" content="Lei YU's blog">
 <meta property="og:description" content="有关18653-Software Architecture and Design的期中考试复习">
-<meta property="og:updated_time" content="2016-02-29T20:55:58.000Z">
+<meta property="og:image" content="http://yoursite.com/2016/02/28/midterm-18653/soa-ra.jpg">
+<meta property="og:updated_time" content="2016-03-03T02:54:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="midterm-18653">
 <meta name="twitter:description" content="有关18653-Software Architecture and Design的期中考试复习">
@@ -238,7 +239,7 @@
       
         <p>有关18653-Software Architecture and Design的期中考试复习</p>
 <a id="more"></a>
-<h2 id="Basic-questions"><a href="#Basic-questions" class="headerlink" title="Basic questions"></a>Basic questions</h2><h3 id="What-is-Software-Architecture"><a href="#What-is-Software-Architecture" class="headerlink" title="What is Software Architecture"></a>What is Software Architecture</h3><p>Software architecture is a level of design that involves</p>
+<h2 id="Basic-questions"><a href="#Basic-questions" class="headerlink" title="Basic questions"></a>Basic questions<!-- more --></h2><h3 id="What-is-Software-Architecture"><a href="#What-is-Software-Architecture" class="headerlink" title="What is Software Architecture"></a>What is Software Architecture</h3><p>Software architecture is a level of design that involves</p>
 <ul>
 <li>the description of elements from which systems are bulit</li>
 <li>interactions among those elements</li>
@@ -247,12 +248,23 @@
 </ul>
 <h3 id="Why-software-architecture-is-important"><a href="#Why-software-architecture-is-important" class="headerlink" title="Why software architecture is important"></a>Why software architecture is important</h3><ul>
 <li>It has been proved useful for families of system.</li>
-<li>It can make the complex system flexible and well organized<h3 id="Various-view-points"><a href="#Various-view-points" class="headerlink" title="Various view points"></a>Various view points</h3><h4 id="4-1-Views"><a href="#4-1-Views" class="headerlink" title="4+1 Views"></a>4+1 Views</h4></li>
+<li>It can make the complex system flexible and well organized</li>
+</ul>
+<h3 id="Various-view-points"><a href="#Various-view-points" class="headerlink" title="Various view points"></a>Various view points</h3><h4 id="4-1-Views"><a href="#4-1-Views" class="headerlink" title="4+1 Views"></a>4+1 Views</h4><p><strong>角度1</strong>：从作业2的要求中获取的名词与解析</p>
+<ul>
 <li>Function View: Show the component diagram, including interfaces and dependencies.</li>
 <li>Information View: Show the schema, data models and data flows.</li>
 <li>Deployment View: Where to deploy the software components</li>
 <li>Development View: main software packages</li>
-<li>Concurrency View: How do we ensure data consistency in the distributed system<h3 id="What-does-it-mean-by-architecture-through-software-lifecycle"><a href="#What-does-it-mean-by-architecture-through-software-lifecycle" class="headerlink" title="What does it mean by architecture through software lifecycle?"></a>What does it mean by architecture through software lifecycle?</h3></li>
+<li>Concurrency View: How do we ensure data consistency in the distributed system</li>
+</ul>
+<p><strong>角度2</strong>：从课件中获取的名词与解析</p>
+<ul>
+<li>Logical View： 让普通用户能看懂的示例图，介绍整个系统的主要模块与简单交互。包含了简单地类图，时序图等</li>
+<li>Development View: 从程序员的角度较宏观得介绍整个系统的组成。包含了包图，类图</li>
+<li>Process View: 介绍了系统事件处理的流程，介绍整个系统是如何运行的，今儿验证系统的性能。</li>
+<li>Physical View: 从系统工程师的角度介绍，从物理仪器角度介绍系统的架构。mapping the software to hardware</li>
+<li>Scenarios: Putting it all together and use them to show the important scenarios<h3 id="What-does-it-mean-by-architecture-through-software-lifecycle"><a href="#What-does-it-mean-by-architecture-through-software-lifecycle" class="headerlink" title="What does it mean by architecture through software lifecycle?"></a>What does it mean by architecture through software lifecycle?</h3></li>
 <li>Requirements</li>
 <li>Design</li>
 <li>Implementation</li>
@@ -272,7 +284,13 @@
 <h5 id="8-main-types"><a href="#8-main-types" class="headerlink" title="8 main types"></a>8 main types</h5><p>Event, Stream, Procedure Call, Arbitrator, Data Access, Distributor, Linkage, Adaptor</p>
 <h4 id="Benefits-of-first-class-connectors"><a href="#Benefits-of-first-class-connectors" class="headerlink" title="Benefits of first-class connectors"></a>Benefits of first-class connectors</h4><p>Software evolution, separation of concerns, modularity, pluggability</p>
 <h3 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h3><p>An architectural configuration, or topology, is a set of specific associations between the components and connectors of a software system’s architecture</p>
-<h2 id="Architectural-sytles-and-patterns"><a href="#Architectural-sytles-and-patterns" class="headerlink" title="Architectural sytles and patterns"></a>Architectural sytles and patterns</h2><h3 id="Architectural-sytles"><a href="#Architectural-sytles" class="headerlink" title="Architectural sytles"></a>Architectural sytles</h3><h4 id="Defination-2"><a href="#Defination-2" class="headerlink" title="Defination"></a>Defination</h4><p>Codify key constraints and architectural elements (components, connectors, configurations) found effective used in a family of software systems over a given time period</p>
+<h3 id="Rationale"><a href="#Rationale" class="headerlink" title="Rationale"></a>Rationale</h3><p>Rationale is the information that explains why particular architectural decisions were made, and what purpose various elements serve</p>
+<h2 id="Architectural-sytles-and-patterns"><a href="#Architectural-sytles-and-patterns" class="headerlink" title="Architectural sytles and patterns"></a>Architectural sytles and patterns</h2><h3 id="Architectural-sytles"><a href="#Architectural-sytles" class="headerlink" title="Architectural sytles"></a>Architectural sytles</h3><h4 id="Defination-2"><a href="#Defination-2" class="headerlink" title="Defination"></a>Defination</h4><p>A set of architectural desgin decisions that</p>
+<ul>
+<li>are applicable in a given deveopment context</li>
+<li>constrain architectural design decisions that specific to a particular system within that context</li>
+<li>elicit beneficial qualities in each resulting system</li>
+</ul>
 <h4 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h4><p>详见另一篇文章。</p>
 <h3 id="Architectural-patterns"><a href="#Architectural-patterns" class="headerlink" title="Architectural patterns"></a>Architectural patterns</h3><h4 id="Defination-3"><a href="#Defination-3" class="headerlink" title="Defination"></a>Defination</h4><p>A set of architectural design decisions that are applicable to a recurring design problem, and parameterized to account for different software development contexts in which that problem appears.</p>
 <h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example"></a>Example</h3><p>3-tier (Stage-Logic-Display), MVC, Sense Compute Control</p>
@@ -281,12 +299,39 @@
 <h3 id="Methods-of-design"><a href="#Methods-of-design" class="headerlink" title="Methods of design"></a>Methods of design</h3><h4 id="Greenfield-design"><a href="#Greenfield-design" class="headerlink" title="Greenfield design"></a>Greenfield design</h4><p>这里指的是大家对一个领域都没有经验，就需要用一系列方法不断学习或者试错找出最优解，常用的方法有：<br>Analogy searching, Brainstorming, Literature searching, Morphological Charts, Removing Mental Blocks, Insight from requirements/implementation</p>
 <h2 id="Architectural-Modeling"><a href="#Architectural-Modeling" class="headerlink" title="Architectural Modeling"></a>Architectural Modeling</h2><h3 id="Defination-4"><a href="#Defination-4" class="headerlink" title="Defination"></a>Defination</h3><ol>
 <li>An architectural model is an artifact that captures some or all of the design decisions that comprise a system’s architecture</li>
-<li>Architectural modeling is the reification and documentation of those design decisions<h3 id="How-to-choose-what-to-model"><a href="#How-to-choose-what-to-model" class="headerlink" title="How to choose what to model?"></a>How to choose what to model?</h3>Cost/Benefit Decision</li>
+<li>Architectural modeling is the reification and documentation of those design decisions</li>
 </ol>
+<h3 id="How-to-choose-what-to-model"><a href="#How-to-choose-what-to-model" class="headerlink" title="How to choose what to model?"></a>How to choose what to model?</h3><p>Cost/Benefit Decision</p>
 <h3 id="What-do-we-model"><a href="#What-do-we-model" class="headerlink" title="What do we model?"></a>What do we model?</h3><p>Structure (Architectural element), static/dynamic behaviors, functional/non-functional aspects, Views/Viewpoints</p>
-<h3 id="Important-things-to-“get-right”"><a href="#Important-things-to-“get-right”" class="headerlink" title="Important things to “get right”"></a>Important things to “get right”</h3><p>Consistency, Accuracy/Precision, Ambiguity</p>
+<h3 id="Important-things-to-“get-right”"><a href="#Important-things-to-“get-right”" class="headerlink" title="Important things to “get right”"></a>Important things to “get right”</h3><ul>
+<li>Ambiguity: A model is ambiguous if it is open to more than one interpretation</li>
+<li>Accuracy: A model is accurate if it is correct, conforms to fact, or deviates from correctness within acceptable limits.</li>
+<li>Precision: A model is precise if it is specific, detailed and exact.</li>
+</ul>
 <h3 id="How-do-we-evaluate-modeling-techniques"><a href="#How-do-we-evaluate-modeling-techniques" class="headerlink" title="How do we evaluate modeling techniques?"></a>How do we evaluate modeling techniques?</h3><p>Scope/Purpose, Basic Elements, Style, Static/Dynamic Aspects, Dynamic Modeling</p>
-<h2 id="Service-Oriented-Architecture"><a href="#Service-Oriented-Architecture" class="headerlink" title="Service Oriented Architecture"></a>Service Oriented Architecture</h2><h2 id="ATAM"><a href="#ATAM" class="headerlink" title="ATAM"></a>ATAM</h2><h3 id="9-steps"><a href="#9-steps" class="headerlink" title="9 steps"></a>9 steps</h3><ul>
+<h2 id="Service-Oriented-Architecture"><a href="#Service-Oriented-Architecture" class="headerlink" title="Service Oriented Architecture"></a>Service Oriented Architecture</h2><h3 id="Concept-of-SOA"><a href="#Concept-of-SOA" class="headerlink" title="Concept of SOA"></a>Concept of SOA</h3><p><strong>SOA</strong> is a business IT aligned approach in which applications rely on available services to facilitate business processes. It guides the establishment of a loosely coupled system with flexibility and extensibility.</p>
+<p><strong>Services Computing</strong></p>
+<ul>
+<li>bridges the gap between business and IT</li>
+<li>promises to benefit business</li>
+<li>enable reusable, scalable software as services on the internet</li>
+</ul>
+<h3 id="SOA-on-a-Bilateral-View"><a href="#SOA-on-a-Bilateral-View" class="headerlink" title="SOA on a Bilateral View"></a>SOA on a Bilateral View</h3><ul>
+<li><strong>Top-Down Approach</strong>: decompose business components into business process each been realized by IT process</li>
+<li><strong>Bottom-Up Approach</strong>: provides SOA based IT resources, which can be seamlessly integrated to rapidly. Create new business processes that lead to new business opportunities.</li>
+</ul>
+<h3 id="Enterprise-Service-Bus-ESB"><a href="#Enterprise-Service-Bus-ESB" class="headerlink" title="Enterprise Service Bus(ESB)"></a>Enterprise Service Bus(ESB)</h3><p><strong>ESB</strong> is a conceptual software infrastructure that facilitates dynamic integration, message routing and their interactions, which paves a new systematic way of constructing and deploying enterprise services.</p>
+<h3 id="SOA-RA"><a href="#SOA-RA" class="headerlink" title="SOA-RA"></a>SOA-RA</h3><p><strong>SOA-RA</strong> partitions an SOA-based system into a reusable architecture components</p>
+<p><strong>Enterprise SOA Abstraction Layers</strong></p>
+<ul>
+<li>Business Process Layer</li>
+<li>Business Services Layer</li>
+<li>Component Layer</li>
+<li>Legacy Object Integration Layer</li>
+</ul>
+<!-- ![](./2016-02-28-midterm-18653/soa-ra.jpg) -->
+<img src="/2016/02/28/midterm-18653/soa-ra.jpg" alt="soa-ra.jpg" title="">
+<h2 id="ATAM"><a href="#ATAM" class="headerlink" title="ATAM"></a>ATAM</h2><h3 id="9-steps"><a href="#9-steps" class="headerlink" title="9 steps"></a>9 steps</h3><ul>
 <li>Step 1: Present ATAM</li>
 <li>Step 2: Present Business Drivers</li>
 <li>Step 3: Present the Architecture</li>

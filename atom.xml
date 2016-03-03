@@ -40,11 +40,11 @@
     <link href="http://yoursite.com/2016/02/28/midterm-18653/"/>
     <id>http://yoursite.com/2016/02/28/midterm-18653/</id>
     <published>2016-02-29T04:25:28.000Z</published>
-    <updated>2016-02-29T20:55:58.000Z</updated>
+    <updated>2016-03-03T02:54:16.000Z</updated>
     
     <content type="html">&lt;p&gt;有关18653-Software Architecture and Design的期中考试复习&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;Basic-questions&quot;&gt;&lt;a href=&quot;#Basic-questions&quot; class=&quot;headerlink&quot; title=&quot;Basic questions&quot;&gt;&lt;/a&gt;Basic questions&lt;/h2&gt;&lt;h3 id=&quot;What-is-Software-Architecture&quot;&gt;&lt;a href=&quot;#What-is-Software-Architecture&quot; class=&quot;headerlink&quot; title=&quot;What is Software Architecture&quot;&gt;&lt;/a&gt;What is Software Architecture&lt;/h3&gt;&lt;p&gt;Software architecture is a level of design that involves&lt;/p&gt;
+&lt;h2 id=&quot;Basic-questions&quot;&gt;&lt;a href=&quot;#Basic-questions&quot; class=&quot;headerlink&quot; title=&quot;Basic questions&quot;&gt;&lt;/a&gt;Basic questions&lt;!-- more --&gt;&lt;/h2&gt;&lt;h3 id=&quot;What-is-Software-Architecture&quot;&gt;&lt;a href=&quot;#What-is-Software-Architecture&quot; class=&quot;headerlink&quot; title=&quot;What is Software Architecture&quot;&gt;&lt;/a&gt;What is Software Architecture&lt;/h3&gt;&lt;p&gt;Software architecture is a level of design that involves&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;the description of elements from which systems are bulit&lt;/li&gt;
 &lt;li&gt;interactions among those elements&lt;/li&gt;
@@ -53,12 +53,23 @@
 &lt;/ul&gt;
 &lt;h3 id=&quot;Why-software-architecture-is-important&quot;&gt;&lt;a href=&quot;#Why-software-architecture-is-important&quot; class=&quot;headerlink&quot; title=&quot;Why software architecture is important&quot;&gt;&lt;/a&gt;Why software architecture is important&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;It has been proved useful for families of system.&lt;/li&gt;
-&lt;li&gt;It can make the complex system flexible and well organized&lt;h3 id=&quot;Various-view-points&quot;&gt;&lt;a href=&quot;#Various-view-points&quot; class=&quot;headerlink&quot; title=&quot;Various view points&quot;&gt;&lt;/a&gt;Various view points&lt;/h3&gt;&lt;h4 id=&quot;4-1-Views&quot;&gt;&lt;a href=&quot;#4-1-Views&quot; class=&quot;headerlink&quot; title=&quot;4+1 Views&quot;&gt;&lt;/a&gt;4+1 Views&lt;/h4&gt;&lt;/li&gt;
+&lt;li&gt;It can make the complex system flexible and well organized&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Various-view-points&quot;&gt;&lt;a href=&quot;#Various-view-points&quot; class=&quot;headerlink&quot; title=&quot;Various view points&quot;&gt;&lt;/a&gt;Various view points&lt;/h3&gt;&lt;h4 id=&quot;4-1-Views&quot;&gt;&lt;a href=&quot;#4-1-Views&quot; class=&quot;headerlink&quot; title=&quot;4+1 Views&quot;&gt;&lt;/a&gt;4+1 Views&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;角度1&lt;/strong&gt;：从作业2的要求中获取的名词与解析&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;Function View: Show the component diagram, including interfaces and dependencies.&lt;/li&gt;
 &lt;li&gt;Information View: Show the schema, data models and data flows.&lt;/li&gt;
 &lt;li&gt;Deployment View: Where to deploy the software components&lt;/li&gt;
 &lt;li&gt;Development View: main software packages&lt;/li&gt;
-&lt;li&gt;Concurrency View: How do we ensure data consistency in the distributed system&lt;h3 id=&quot;What-does-it-mean-by-architecture-through-software-lifecycle&quot;&gt;&lt;a href=&quot;#What-does-it-mean-by-architecture-through-software-lifecycle&quot; class=&quot;headerlink&quot; title=&quot;What does it mean by architecture through software lifecycle?&quot;&gt;&lt;/a&gt;What does it mean by architecture through software lifecycle?&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;Concurrency View: How do we ensure data consistency in the distributed system&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;角度2&lt;/strong&gt;：从课件中获取的名词与解析&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Logical View： 让普通用户能看懂的示例图，介绍整个系统的主要模块与简单交互。包含了简单地类图，时序图等&lt;/li&gt;
+&lt;li&gt;Development View: 从程序员的角度较宏观得介绍整个系统的组成。包含了包图，类图&lt;/li&gt;
+&lt;li&gt;Process View: 介绍了系统事件处理的流程，介绍整个系统是如何运行的，今儿验证系统的性能。&lt;/li&gt;
+&lt;li&gt;Physical View: 从系统工程师的角度介绍，从物理仪器角度介绍系统的架构。mapping the software to hardware&lt;/li&gt;
+&lt;li&gt;Scenarios: Putting it all together and use them to show the important scenarios&lt;h3 id=&quot;What-does-it-mean-by-architecture-through-software-lifecycle&quot;&gt;&lt;a href=&quot;#What-does-it-mean-by-architecture-through-software-lifecycle&quot; class=&quot;headerlink&quot; title=&quot;What does it mean by architecture through software lifecycle?&quot;&gt;&lt;/a&gt;What does it mean by architecture through software lifecycle?&lt;/h3&gt;&lt;/li&gt;
 &lt;li&gt;Requirements&lt;/li&gt;
 &lt;li&gt;Design&lt;/li&gt;
 &lt;li&gt;Implementation&lt;/li&gt;
@@ -78,7 +89,13 @@
 &lt;h5 id=&quot;8-main-types&quot;&gt;&lt;a href=&quot;#8-main-types&quot; class=&quot;headerlink&quot; title=&quot;8 main types&quot;&gt;&lt;/a&gt;8 main types&lt;/h5&gt;&lt;p&gt;Event, Stream, Procedure Call, Arbitrator, Data Access, Distributor, Linkage, Adaptor&lt;/p&gt;
 &lt;h4 id=&quot;Benefits-of-first-class-connectors&quot;&gt;&lt;a href=&quot;#Benefits-of-first-class-connectors&quot; class=&quot;headerlink&quot; title=&quot;Benefits of first-class connectors&quot;&gt;&lt;/a&gt;Benefits of first-class connectors&lt;/h4&gt;&lt;p&gt;Software evolution, separation of concerns, modularity, pluggability&lt;/p&gt;
 &lt;h3 id=&quot;Configuration&quot;&gt;&lt;a href=&quot;#Configuration&quot; class=&quot;headerlink&quot; title=&quot;Configuration&quot;&gt;&lt;/a&gt;Configuration&lt;/h3&gt;&lt;p&gt;An architectural configuration, or topology, is a set of specific associations between the components and connectors of a software system’s architecture&lt;/p&gt;
-&lt;h2 id=&quot;Architectural-sytles-and-patterns&quot;&gt;&lt;a href=&quot;#Architectural-sytles-and-patterns&quot; class=&quot;headerlink&quot; title=&quot;Architectural sytles and patterns&quot;&gt;&lt;/a&gt;Architectural sytles and patterns&lt;/h2&gt;&lt;h3 id=&quot;Architectural-sytles&quot;&gt;&lt;a href=&quot;#Architectural-sytles&quot; class=&quot;headerlink&quot; title=&quot;Architectural sytles&quot;&gt;&lt;/a&gt;Architectural sytles&lt;/h3&gt;&lt;h4 id=&quot;Defination-2&quot;&gt;&lt;a href=&quot;#Defination-2&quot; class=&quot;headerlink&quot; title=&quot;Defination&quot;&gt;&lt;/a&gt;Defination&lt;/h4&gt;&lt;p&gt;Codify key constraints and architectural elements (components, connectors, configurations) found effective used in a family of software systems over a given time period&lt;/p&gt;
+&lt;h3 id=&quot;Rationale&quot;&gt;&lt;a href=&quot;#Rationale&quot; class=&quot;headerlink&quot; title=&quot;Rationale&quot;&gt;&lt;/a&gt;Rationale&lt;/h3&gt;&lt;p&gt;Rationale is the information that explains why particular architectural decisions were made, and what purpose various elements serve&lt;/p&gt;
+&lt;h2 id=&quot;Architectural-sytles-and-patterns&quot;&gt;&lt;a href=&quot;#Architectural-sytles-and-patterns&quot; class=&quot;headerlink&quot; title=&quot;Architectural sytles and patterns&quot;&gt;&lt;/a&gt;Architectural sytles and patterns&lt;/h2&gt;&lt;h3 id=&quot;Architectural-sytles&quot;&gt;&lt;a href=&quot;#Architectural-sytles&quot; class=&quot;headerlink&quot; title=&quot;Architectural sytles&quot;&gt;&lt;/a&gt;Architectural sytles&lt;/h3&gt;&lt;h4 id=&quot;Defination-2&quot;&gt;&lt;a href=&quot;#Defination-2&quot; class=&quot;headerlink&quot; title=&quot;Defination&quot;&gt;&lt;/a&gt;Defination&lt;/h4&gt;&lt;p&gt;A set of architectural desgin decisions that&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;are applicable in a given deveopment context&lt;/li&gt;
+&lt;li&gt;constrain architectural design decisions that specific to a particular system within that context&lt;/li&gt;
+&lt;li&gt;elicit beneficial qualities in each resulting system&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h4 id=&quot;Example&quot;&gt;&lt;a href=&quot;#Example&quot; class=&quot;headerlink&quot; title=&quot;Example&quot;&gt;&lt;/a&gt;Example&lt;/h4&gt;&lt;p&gt;详见另一篇文章。&lt;/p&gt;
 &lt;h3 id=&quot;Architectural-patterns&quot;&gt;&lt;a href=&quot;#Architectural-patterns&quot; class=&quot;headerlink&quot; title=&quot;Architectural patterns&quot;&gt;&lt;/a&gt;Architectural patterns&lt;/h3&gt;&lt;h4 id=&quot;Defination-3&quot;&gt;&lt;a href=&quot;#Defination-3&quot; class=&quot;headerlink&quot; title=&quot;Defination&quot;&gt;&lt;/a&gt;Defination&lt;/h4&gt;&lt;p&gt;A set of architectural design decisions that are applicable to a recurring design problem, and parameterized to account for different software development contexts in which that problem appears.&lt;/p&gt;
 &lt;h3 id=&quot;Example-1&quot;&gt;&lt;a href=&quot;#Example-1&quot; class=&quot;headerlink&quot; title=&quot;Example&quot;&gt;&lt;/a&gt;Example&lt;/h3&gt;&lt;p&gt;3-tier (Stage-Logic-Display), MVC, Sense Compute Control&lt;/p&gt;
@@ -87,12 +104,39 @@
 &lt;h3 id=&quot;Methods-of-design&quot;&gt;&lt;a href=&quot;#Methods-of-design&quot; class=&quot;headerlink&quot; title=&quot;Methods of design&quot;&gt;&lt;/a&gt;Methods of design&lt;/h3&gt;&lt;h4 id=&quot;Greenfield-design&quot;&gt;&lt;a href=&quot;#Greenfield-design&quot; class=&quot;headerlink&quot; title=&quot;Greenfield design&quot;&gt;&lt;/a&gt;Greenfield design&lt;/h4&gt;&lt;p&gt;这里指的是大家对一个领域都没有经验，就需要用一系列方法不断学习或者试错找出最优解，常用的方法有：&lt;br&gt;Analogy searching, Brainstorming, Literature searching, Morphological Charts, Removing Mental Blocks, Insight from requirements/implementation&lt;/p&gt;
 &lt;h2 id=&quot;Architectural-Modeling&quot;&gt;&lt;a href=&quot;#Architectural-Modeling&quot; class=&quot;headerlink&quot; title=&quot;Architectural Modeling&quot;&gt;&lt;/a&gt;Architectural Modeling&lt;/h2&gt;&lt;h3 id=&quot;Defination-4&quot;&gt;&lt;a href=&quot;#Defination-4&quot; class=&quot;headerlink&quot; title=&quot;Defination&quot;&gt;&lt;/a&gt;Defination&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;An architectural model is an artifact that captures some or all of the design decisions that comprise a system’s architecture&lt;/li&gt;
-&lt;li&gt;Architectural modeling is the reification and documentation of those design decisions&lt;h3 id=&quot;How-to-choose-what-to-model&quot;&gt;&lt;a href=&quot;#How-to-choose-what-to-model&quot; class=&quot;headerlink&quot; title=&quot;How to choose what to model?&quot;&gt;&lt;/a&gt;How to choose what to model?&lt;/h3&gt;Cost/Benefit Decision&lt;/li&gt;
+&lt;li&gt;Architectural modeling is the reification and documentation of those design decisions&lt;/li&gt;
 &lt;/ol&gt;
+&lt;h3 id=&quot;How-to-choose-what-to-model&quot;&gt;&lt;a href=&quot;#How-to-choose-what-to-model&quot; class=&quot;headerlink&quot; title=&quot;How to choose what to model?&quot;&gt;&lt;/a&gt;How to choose what to model?&lt;/h3&gt;&lt;p&gt;Cost/Benefit Decision&lt;/p&gt;
 &lt;h3 id=&quot;What-do-we-model&quot;&gt;&lt;a href=&quot;#What-do-we-model&quot; class=&quot;headerlink&quot; title=&quot;What do we model?&quot;&gt;&lt;/a&gt;What do we model?&lt;/h3&gt;&lt;p&gt;Structure (Architectural element), static/dynamic behaviors, functional/non-functional aspects, Views/Viewpoints&lt;/p&gt;
-&lt;h3 id=&quot;Important-things-to-“get-right”&quot;&gt;&lt;a href=&quot;#Important-things-to-“get-right”&quot; class=&quot;headerlink&quot; title=&quot;Important things to “get right”&quot;&gt;&lt;/a&gt;Important things to “get right”&lt;/h3&gt;&lt;p&gt;Consistency, Accuracy/Precision, Ambiguity&lt;/p&gt;
+&lt;h3 id=&quot;Important-things-to-“get-right”&quot;&gt;&lt;a href=&quot;#Important-things-to-“get-right”&quot; class=&quot;headerlink&quot; title=&quot;Important things to “get right”&quot;&gt;&lt;/a&gt;Important things to “get right”&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Ambiguity: A model is ambiguous if it is open to more than one interpretation&lt;/li&gt;
+&lt;li&gt;Accuracy: A model is accurate if it is correct, conforms to fact, or deviates from correctness within acceptable limits.&lt;/li&gt;
+&lt;li&gt;Precision: A model is precise if it is specific, detailed and exact.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&quot;How-do-we-evaluate-modeling-techniques&quot;&gt;&lt;a href=&quot;#How-do-we-evaluate-modeling-techniques&quot; class=&quot;headerlink&quot; title=&quot;How do we evaluate modeling techniques?&quot;&gt;&lt;/a&gt;How do we evaluate modeling techniques?&lt;/h3&gt;&lt;p&gt;Scope/Purpose, Basic Elements, Style, Static/Dynamic Aspects, Dynamic Modeling&lt;/p&gt;
-&lt;h2 id=&quot;Service-Oriented-Architecture&quot;&gt;&lt;a href=&quot;#Service-Oriented-Architecture&quot; class=&quot;headerlink&quot; title=&quot;Service Oriented Architecture&quot;&gt;&lt;/a&gt;Service Oriented Architecture&lt;/h2&gt;&lt;h2 id=&quot;ATAM&quot;&gt;&lt;a href=&quot;#ATAM&quot; class=&quot;headerlink&quot; title=&quot;ATAM&quot;&gt;&lt;/a&gt;ATAM&lt;/h2&gt;&lt;h3 id=&quot;9-steps&quot;&gt;&lt;a href=&quot;#9-steps&quot; class=&quot;headerlink&quot; title=&quot;9 steps&quot;&gt;&lt;/a&gt;9 steps&lt;/h3&gt;&lt;ul&gt;
+&lt;h2 id=&quot;Service-Oriented-Architecture&quot;&gt;&lt;a href=&quot;#Service-Oriented-Architecture&quot; class=&quot;headerlink&quot; title=&quot;Service Oriented Architecture&quot;&gt;&lt;/a&gt;Service Oriented Architecture&lt;/h2&gt;&lt;h3 id=&quot;Concept-of-SOA&quot;&gt;&lt;a href=&quot;#Concept-of-SOA&quot; class=&quot;headerlink&quot; title=&quot;Concept of SOA&quot;&gt;&lt;/a&gt;Concept of SOA&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;SOA&lt;/strong&gt; is a business IT aligned approach in which applications rely on available services to facilitate business processes. It guides the establishment of a loosely coupled system with flexibility and extensibility.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Services Computing&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;bridges the gap between business and IT&lt;/li&gt;
+&lt;li&gt;promises to benefit business&lt;/li&gt;
+&lt;li&gt;enable reusable, scalable software as services on the internet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;SOA-on-a-Bilateral-View&quot;&gt;&lt;a href=&quot;#SOA-on-a-Bilateral-View&quot; class=&quot;headerlink&quot; title=&quot;SOA on a Bilateral View&quot;&gt;&lt;/a&gt;SOA on a Bilateral View&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Top-Down Approach&lt;/strong&gt;: decompose business components into business process each been realized by IT process&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bottom-Up Approach&lt;/strong&gt;: provides SOA based IT resources, which can be seamlessly integrated to rapidly. Create new business processes that lead to new business opportunities.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Enterprise-Service-Bus-ESB&quot;&gt;&lt;a href=&quot;#Enterprise-Service-Bus-ESB&quot; class=&quot;headerlink&quot; title=&quot;Enterprise Service Bus(ESB)&quot;&gt;&lt;/a&gt;Enterprise Service Bus(ESB)&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;ESB&lt;/strong&gt; is a conceptual software infrastructure that facilitates dynamic integration, message routing and their interactions, which paves a new systematic way of constructing and deploying enterprise services.&lt;/p&gt;
+&lt;h3 id=&quot;SOA-RA&quot;&gt;&lt;a href=&quot;#SOA-RA&quot; class=&quot;headerlink&quot; title=&quot;SOA-RA&quot;&gt;&lt;/a&gt;SOA-RA&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;SOA-RA&lt;/strong&gt; partitions an SOA-based system into a reusable architecture components&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Enterprise SOA Abstraction Layers&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Business Process Layer&lt;/li&gt;
+&lt;li&gt;Business Services Layer&lt;/li&gt;
+&lt;li&gt;Component Layer&lt;/li&gt;
+&lt;li&gt;Legacy Object Integration Layer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- ![](./2016-02-28-midterm-18653/soa-ra.jpg) --&gt;
+&lt;img src=&quot;/2016/02/28/midterm-18653/soa-ra.jpg&quot; alt=&quot;soa-ra.jpg&quot; title=&quot;&quot;&gt;
+&lt;h2 id=&quot;ATAM&quot;&gt;&lt;a href=&quot;#ATAM&quot; class=&quot;headerlink&quot; title=&quot;ATAM&quot;&gt;&lt;/a&gt;ATAM&lt;/h2&gt;&lt;h3 id=&quot;9-steps&quot;&gt;&lt;a href=&quot;#9-steps&quot; class=&quot;headerlink&quot; title=&quot;9 steps&quot;&gt;&lt;/a&gt;9 steps&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;Step 1: Present ATAM&lt;/li&gt;
 &lt;li&gt;Step 2: Present Business Drivers&lt;/li&gt;
 &lt;li&gt;Step 3: Present the Architecture&lt;/li&gt;
