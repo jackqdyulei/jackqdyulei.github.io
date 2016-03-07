@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>confusion-matrix-lightside | Lei YU&#39;s blog</title>
+  <title>Ubuntu下添加开机自动脚本 | Lei YU&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
+  <meta name="description" content="主要介绍如何在Ubuntu下添加开机自动脚本。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="confusion-matrix-lightside">
-<meta property="og:url" content="http://yoursite.com/2016/02/29/confusion-matrix-lightside/index.html">
+<meta property="og:title" content="Ubuntu下添加开机自动脚本">
+<meta property="og:url" content="http://yoursite.com/2016/03/06/linux-auto-script/index.html">
 <meta property="og:site_name" content="Lei YU's blog">
-<meta property="og:description">
-<meta property="og:updated_time" content="2016-02-29T16:17:17.000Z">
+<meta property="og:description" content="主要介绍如何在Ubuntu下添加开机自动脚本。">
+<meta property="og:updated_time" content="2016-03-07T04:45:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="confusion-matrix-lightside">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Ubuntu下添加开机自动脚本">
+<meta name="twitter:description" content="主要介绍如何在Ubuntu下添加开机自动脚本。">
   
     <link rel="alternative" href="/atom.xml" title="Lei YU&#39;s blog" type="application/atom+xml">
   
@@ -195,11 +195,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-confusion-matrix-lightside" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-linux-auto-script" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/02/29/confusion-matrix-lightside/" class="article-date">
-  	<time datetime="2016-02-29T16:17:17.000Z" itemprop="datePublished">2016-02-29</time>
+      <a href="/2016/03/06/linux-auto-script/" class="article-date">
+  	<time datetime="2016-03-06T22:50:06.000Z" itemprop="datePublished">2016-03-06</time>
 </a>
     </div>
   
@@ -212,7 +212,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      confusion-matrix-lightside
+      Ubuntu下添加开机自动脚本
     </h1>
   
 
@@ -220,7 +220,15 @@
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+	</div>
+
         
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/tutorials/">tutorials</a>
+	</div>
+
 
         <div class="clearfix"></div>
       </div>
@@ -228,7 +236,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
+        <p>主要介绍如何在Ubuntu下添加开机自动脚本。</p>
+<a id="more"></a>
+<h2 id="编辑rc-local脚本"><a href="#编辑rc-local脚本" class="headerlink" title="编辑rc.local脚本"></a>编辑<code>rc.local</code>脚本</h2><p><code>rc.local</code>脚本是一个ubuntu开机后会自动执行的脚本，我们可以在该脚本内添加命令行指令。</p>
+<p>该脚本位于<code>/etc/</code>路径下，需要<code>root</code>权限才能修改。该脚本具体格式如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/bin/sh -e</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># rc.local</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This script is executed at the end of each multiuser runlevel.</span></span><br><span class="line"><span class="comment"># Make sure that the script will "exit 0" on success or any other</span></span><br><span class="line"><span class="comment"># value on error.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># In order to enable or disable this script just change the execution</span></span><br><span class="line"><span class="comment"># bits.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># By default this script does nothing.</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意: 一定要将命令添加在 <code>exit 0</code>之前</p>
+</blockquote>
+<h2 id="添加一个开机启动脚本"><a href="#添加一个开机启动脚本" class="headerlink" title="添加一个开机启动脚本"></a>添加一个开机启动脚本</h2><p>上面的方法虽然奏效，但是将所有不同的脚本指令写入同一个文件不是一个好的<code>style</code>。我们可以自己写一个<code>run.sh</code>,然后让系统在开机时自动执行。</p>
+<p>以下是基本步骤</p>
+<h3 id="1-建立自己的脚本"><a href="#1-建立自己的脚本" class="headerlink" title="1. 建立自己的脚本"></a>1. 建立自己的脚本</h3><p>首先我们需要写一个需要执行的脚本。在这里我们已一个开启服务器的脚本为例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="built_in">cd</span> /home/ubuntu/undertow-server/</span><br><span class="line">sudo mvn <span class="built_in">exec</span>:java</span><br></pre></td></tr></table></figure>
+<p>随后将脚本保存为<code>run_server.sh</code></p>
+<h3 id="2-修改脚本权限"><a href="#2-修改脚本权限" class="headerlink" title="2. 修改脚本权限"></a>2. 修改脚本权限</h3><p>一定要让脚本具备可执行权限，可以执行如下指令：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo chmod 755 run_server.sh</span><br></pre></td></tr></table></figure>
+<h3 id="3-将脚本放置在启动路径下"><a href="#3-将脚本放置在启动路径下" class="headerlink" title="3. 将脚本放置在启动路径下"></a>3. 将脚本放置在启动路径下</h3><p>将<code>run_server.sh</code>移动到<code>/etc/init.d</code>路径下，可以直接拷贝，也可以链接过去<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo cp run_server.sh /etc/init.d/</span><br></pre></td></tr></table></figure></p>
+<h3 id="4-将脚本添加到启动脚本。"><a href="#4-将脚本添加到启动脚本。" class="headerlink" title="4. 将脚本添加到启动脚本。"></a>4. 将脚本添加到启动脚本。</h3><p>执行如下指令，在这里<code>90</code>表明一个优先级，越高表示执行的越晚</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /etc/init.d</span><br><span class="line">$ sudo update-rc.d run_server defaults <span class="number">90</span></span><br></pre></td></tr></table></figure>
+<h3 id="如何移除该脚本"><a href="#如何移除该脚本" class="headerlink" title="如何移除该脚本"></a>如何移除该脚本</h3><p>很简单，执行如下指令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo update-rc.d <span class="operator">-f</span> run_server remove</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -238,18 +265,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/03/06/linux-auto-script/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Ubuntu下添加开机自动脚本
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/02/28/midterm-18653/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">midterm-18653</div>
+    <a href="/2016/02/29/confusion-matrix-lightside/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">confusion-matrix-lightside</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -284,7 +302,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="confusion-matrix-lightside" data-title="confusion-matrix-lightside" data-url="http://yoursite.com/2016/02/29/confusion-matrix-lightside/"></div>
+	<div class="ds-thread" data-thread-key="linux-auto-script" data-title="Ubuntu下添加开机自动脚本" data-url="http://yoursite.com/2016/03/06/linux-auto-script/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

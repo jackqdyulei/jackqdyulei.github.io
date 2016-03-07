@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-29T16:17:17.000Z</updated>
+  <updated>2016-03-07T04:45:16.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ubuntu下添加开机自动脚本</title>
+    <link href="http://yoursite.com/2016/03/06/linux-auto-script/"/>
+    <id>http://yoursite.com/2016/03/06/linux-auto-script/</id>
+    <published>2016-03-06T22:50:06.000Z</published>
+    <updated>2016-03-07T04:45:16.000Z</updated>
+    
+    <content type="html">&lt;p&gt;主要介绍如何在Ubuntu下添加开机自动脚本。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;编辑rc-local脚本&quot;&gt;&lt;a href=&quot;#编辑rc-local脚本&quot; class=&quot;headerlink&quot; title=&quot;编辑rc.local脚本&quot;&gt;&lt;/a&gt;编辑&lt;code&gt;rc.local&lt;/code&gt;脚本&lt;/h2&gt;&lt;p&gt;&lt;code&gt;rc.local&lt;/code&gt;脚本是一个ubuntu开机后会自动执行的脚本，我们可以在该脚本内添加命令行指令。&lt;/p&gt;
+&lt;p&gt;该脚本位于&lt;code&gt;/etc/&lt;/code&gt;路径下，需要&lt;code&gt;root&lt;/code&gt;权限才能修改。该脚本具体格式如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#!/bin/sh -e&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# rc.local&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# This script is executed at the end of each multiuser runlevel.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Make sure that the script will &quot;exit 0&quot; on success or any other&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# value on error.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# In order to enable or disable this script just change the execution&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# bits.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# By default this script does nothing.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;exit&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意: 一定要将命令添加在 &lt;code&gt;exit 0&lt;/code&gt;之前&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;添加一个开机启动脚本&quot;&gt;&lt;a href=&quot;#添加一个开机启动脚本&quot; class=&quot;headerlink&quot; title=&quot;添加一个开机启动脚本&quot;&gt;&lt;/a&gt;添加一个开机启动脚本&lt;/h2&gt;&lt;p&gt;上面的方法虽然奏效，但是将所有不同的脚本指令写入同一个文件不是一个好的&lt;code&gt;style&lt;/code&gt;。我们可以自己写一个&lt;code&gt;run.sh&lt;/code&gt;,然后让系统在开机时自动执行。&lt;/p&gt;
+&lt;p&gt;以下是基本步骤&lt;/p&gt;
+&lt;h3 id=&quot;1-建立自己的脚本&quot;&gt;&lt;a href=&quot;#1-建立自己的脚本&quot; class=&quot;headerlink&quot; title=&quot;1. 建立自己的脚本&quot;&gt;&lt;/a&gt;1. 建立自己的脚本&lt;/h3&gt;&lt;p&gt;首先我们需要写一个需要执行的脚本。在这里我们已一个开启服务器的脚本为例：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;shebang&quot;&gt;#!/bin/bash&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; /home/ubuntu/undertow-server/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo mvn &lt;span class=&quot;built_in&quot;&gt;exec&lt;/span&gt;:java&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;随后将脚本保存为&lt;code&gt;run_server.sh&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&quot;2-修改脚本权限&quot;&gt;&lt;a href=&quot;#2-修改脚本权限&quot; class=&quot;headerlink&quot; title=&quot;2. 修改脚本权限&quot;&gt;&lt;/a&gt;2. 修改脚本权限&lt;/h3&gt;&lt;p&gt;一定要让脚本具备可执行权限，可以执行如下指令：&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ sudo chmod 755 run_server.sh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;3-将脚本放置在启动路径下&quot;&gt;&lt;a href=&quot;#3-将脚本放置在启动路径下&quot; class=&quot;headerlink&quot; title=&quot;3. 将脚本放置在启动路径下&quot;&gt;&lt;/a&gt;3. 将脚本放置在启动路径下&lt;/h3&gt;&lt;p&gt;将&lt;code&gt;run_server.sh&lt;/code&gt;移动到&lt;code&gt;/etc/init.d&lt;/code&gt;路径下，可以直接拷贝，也可以链接过去&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ sudo cp run_server.sh /etc/init.d/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&quot;4-将脚本添加到启动脚本。&quot;&gt;&lt;a href=&quot;#4-将脚本添加到启动脚本。&quot; class=&quot;headerlink&quot; title=&quot;4. 将脚本添加到启动脚本。&quot;&gt;&lt;/a&gt;4. 将脚本添加到启动脚本。&lt;/h3&gt;&lt;p&gt;执行如下指令，在这里&lt;code&gt;90&lt;/code&gt;表明一个优先级，越高表示执行的越晚&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; /etc/init.d&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ sudo update-rc.d run_server defaults &lt;span class=&quot;number&quot;&gt;90&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;如何移除该脚本&quot;&gt;&lt;a href=&quot;#如何移除该脚本&quot; class=&quot;headerlink&quot; title=&quot;如何移除该脚本&quot;&gt;&lt;/a&gt;如何移除该脚本&lt;/h3&gt;&lt;p&gt;很简单，执行如下指令：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ sudo update-rc.d &lt;span class=&quot;operator&quot;&gt;-f&lt;/span&gt; run_server remove&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;主要介绍如何在Ubuntu下添加开机自动脚本。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="tutorials" scheme="http://yoursite.com/categories/tutorials/"/>
+    
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>confusion-matrix-lightside</title>
