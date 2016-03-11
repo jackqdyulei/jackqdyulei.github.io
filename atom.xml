@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-07T04:45:16.000Z</updated>
+  <updated>2016-03-09T20:46:48.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MYSQL 数据库教程</title>
+    <link href="http://yoursite.com/2016/03/09/mysql-tutorial/"/>
+    <id>http://yoursite.com/2016/03/09/mysql-tutorial/</id>
+    <published>2016-03-09T20:05:07.000Z</published>
+    <updated>2016-03-09T20:46:48.000Z</updated>
+    
+    <content type="html">&lt;p&gt;主要介绍MYSQL数据库的基本知识和库函数指令。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;基本知识介绍&quot;&gt;&lt;a href=&quot;#基本知识介绍&quot; class=&quot;headerlink&quot; title=&quot;基本知识介绍&quot;&gt;&lt;/a&gt;基本知识介绍&lt;/h2&gt;&lt;h2 id=&quot;搭建MYSQL数据库&quot;&gt;&lt;a href=&quot;#搭建MYSQL数据库&quot; class=&quot;headerlink&quot; title=&quot;搭建MYSQL数据库&quot;&gt;&lt;/a&gt;搭建MYSQL数据库&lt;/h2&gt;&lt;h3 id=&quot;安装MYSQL数据库&quot;&gt;&lt;a href=&quot;#安装MYSQL数据库&quot; class=&quot;headerlink&quot; title=&quot;安装MYSQL数据库&quot;&gt;&lt;/a&gt;安装MYSQL数据库&lt;/h3&gt;&lt;p&gt;在ubuntu安装mysql十分简单，只要执行：&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ sudo apt-get update&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ sudo apt-get install mysql-server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;在这期间，会让你设置&lt;code&gt;root&lt;/code&gt;用户的密码&lt;/p&gt;
+&lt;h3 id=&quot;MYSQL-常用指令&quot;&gt;&lt;a href=&quot;#MYSQL-常用指令&quot; class=&quot;headerlink&quot; title=&quot;MYSQL 常用指令&quot;&gt;&lt;/a&gt;MYSQL 常用指令&lt;/h3&gt;&lt;h4 id=&quot;重启MYSQL&quot;&gt;&lt;a href=&quot;#重启MYSQL&quot; class=&quot;headerlink&quot; title=&quot;重启MYSQL&quot;&gt;&lt;/a&gt;重启MYSQL&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ sudo service mysql restart&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;进入MYSQL-SHELL&quot;&gt;&lt;a href=&quot;#进入MYSQL-SHELL&quot; class=&quot;headerlink&quot; title=&quot;进入MYSQL SHELL&quot;&gt;&lt;/a&gt;进入MYSQL SHELL&lt;/h4&gt;&lt;p&gt;以&lt;code&gt;root&lt;/code&gt;身份登陆，密码为&lt;code&gt;root&lt;/code&gt;&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ mysql -u root -p root&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h4 id=&quot;将数据导入MYSQL&quot;&gt;&lt;a href=&quot;#将数据导入MYSQL&quot; class=&quot;headerlink&quot; title=&quot;将数据导入MYSQL&quot;&gt;&lt;/a&gt;将数据导入MYSQL&lt;/h4&gt;&lt;h5 id=&quot;mysqlimport用法&quot;&gt;&lt;a href=&quot;#mysqlimport用法&quot; class=&quot;headerlink&quot; title=&quot;mysqlimport用法&quot;&gt;&lt;/a&gt;mysqlimport用法&lt;/h5&gt;&lt;p&gt;使用&lt;code&gt;mysqlimport&lt;/code&gt;指令可将数据从&lt;code&gt;csv&lt;/code&gt;导入数据库&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ mysqlimport --fields-terminated-by=, --local -u root -pdb15319root song_db songs.csv&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;将&lt;code&gt;songs.csv&lt;/code&gt;中的数据导入数据库&lt;code&gt;song_db&lt;/code&gt;,表名为&lt;code&gt;songs&lt;/code&gt;。在&lt;code&gt;songs.csv&lt;/code&gt;中分隔符为&lt;code&gt;,&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&quot;MYSQL-SHELL-常用指令&quot;&gt;&lt;a href=&quot;#MYSQL-SHELL-常用指令&quot; class=&quot;headerlink&quot; title=&quot;MYSQL SHELL 常用指令&quot;&gt;&lt;/a&gt;MYSQL SHELL 常用指令&lt;/h3&gt;&lt;p&gt;这里指进入mysql shell之后可以输入的指令，下面是一些实例&lt;/p&gt;
+&lt;h4 id=&quot;常用指令合集1&quot;&gt;&lt;a href=&quot;#常用指令合集1&quot; class=&quot;headerlink&quot; title=&quot;常用指令合集1&quot;&gt;&lt;/a&gt;常用指令合集1&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mysql&amp;gt; show databases;          &lt;span class=&quot;comment&quot;&gt;#显示数据库&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mysql&amp;gt; show tables;             &lt;span class=&quot;comment&quot;&gt;#显示数据表&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mysql&amp;gt; describe students;       &lt;span class=&quot;comment&quot;&gt;#显示数据表students的详细信息&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mysql&amp;gt; create database demo;    &lt;span class=&quot;comment&quot;&gt;#创建数据库demo&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mysql&amp;gt; create user &lt;span class=&quot;string&quot;&gt;&#39;demouser&#39;&lt;/span&gt;@&lt;span class=&quot;string&quot;&gt;&#39;localhost&#39;&lt;/span&gt; identified by &lt;span class=&quot;string&quot;&gt;&#39;demopassword&#39;&lt;/span&gt;; &lt;span class=&quot;comment&quot;&gt;#创建用户demouser本地用户，密码为demopassword&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mysql&amp;gt; grant all privileges on demo.* to &lt;span class=&quot;string&quot;&gt;&#39;demouser&#39;&lt;/span&gt;@&lt;span class=&quot;string&quot;&gt;&#39;localhost&#39;&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;#给demouser赋予针对demo的所有权限&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;常用指令合集2&quot;&gt;&lt;a href=&quot;#常用指令合集2&quot; class=&quot;headerlink&quot; title=&quot;常用指令合集2&quot;&gt;&lt;/a&gt;常用指令合集2&lt;/h4&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;主要介绍MYSQL数据库的基本知识和库函数指令。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="tutorial" scheme="http://yoursite.com/categories/tutorial/"/>
+    
+    
+      <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
+    
+  </entry>
   
   <entry>
     <title>Ubuntu下添加开机自动脚本</title>
