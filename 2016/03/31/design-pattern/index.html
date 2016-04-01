@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>design-pattern | Lei YU&#39;s blog</title>
+  <title>设计模式 | Lei YU&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="主要介绍了GOF系列的设计模式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="design-pattern">
+<meta property="og:title" content="设计模式">
 <meta property="og:url" content="http://yoursite.com/2016/03/31/design-pattern/index.html">
 <meta property="og:site_name" content="Lei YU's blog">
 <meta property="og:description" content="主要介绍了GOF系列的设计模式">
@@ -21,9 +21,16 @@
 <meta property="og:image" content="http://yoursite.com/2016/03/31/design-pattern/decorator.jpg">
 <meta property="og:image" content="http://yoursite.com/2016/03/31/design-pattern/flyweight.jpg">
 <meta property="og:image" content="http://yoursite.com/2016/03/31/design-pattern/command.jpg">
-<meta property="og:updated_time" content="2016-04-01T04:30:38.000Z">
+<meta property="og:image" content="http://yoursite.com/2016/03/31/design-pattern/interpreter.jpg">
+<meta property="og:image" content="http://yoursite.com/2016/03/31/design-pattern/mediator.jpg">
+<meta property="og:image" content="http://yoursite.com/2016/03/31/design-pattern/state.jpg">
+<meta property="og:image" content="http://yoursite.com/2016/03/31/design-pattern/strategy.jpg">
+<meta property="og:image" content="http://yoursite.com/2016/03/31/design-pattern/chain.jpg">
+<meta property="og:image" content="http://yoursite.com/2016/03/31/design-pattern/template-1.jpg">
+<meta property="og:image" content="http://yoursite.com/2016/03/31/design-pattern/template-2.jpg">
+<meta property="og:updated_time" content="2016-04-01T15:35:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="design-pattern">
+<meta name="twitter:title" content="设计模式">
 <meta name="twitter:description" content="主要介绍了GOF系列的设计模式">
   
     <link rel="alternative" href="/atom.xml" title="Lei YU&#39;s blog" type="application/atom+xml">
@@ -221,7 +228,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      design-pattern
+      设计模式
     </h1>
   
 
@@ -250,7 +257,8 @@
 <p>设计模式，主要讲的是<code>可重用</code>，<code>扩展性强</code>，<code>优雅</code>的解决问题的方法。他不是一个数据结构。相比于领域相关的设计，设计模式更贴近于代码层面的设计。</p>
 <p>感觉几乎所有的设计模式都离不开<code>接口</code>和<code>继承</code>这两个概念。</p>
 <h2 id="Design-Patterns"><a href="#Design-Patterns" class="headerlink" title="Design Patterns"></a>Design Patterns</h2><p>基于GOF的设计模式可分为三部分，分别是<code>Creational Patterns</code>,<code>Structural Patterns</code>,<code>Behavioral Patterns</code>。</p>
-<p>关于Design Patterns,最好的学习资料就是<a href="http://www.tutorialspoint.com/design_pattern/prototype_pattern.htm" target="_blank" rel="external">tutorialspoint</a>。这篇笔记后续主要介绍我还不熟悉，或者觉得需要深究的设计模式。</p>
+<p>如果你是初学者,请参考资料<a href="http://www.tutorialspoint.com/design_pattern/prototype_pattern.htm" target="_blank" rel="external">tutorialspoint</a>。这里主要是我的笔记，记录了我的理解与想法。</p>
+<p>设计模式主要追求的是重用性和拓展性。强行在这里扯运行效率就是耍流氓。</p>
 <h3 id="Creational-Patterns"><a href="#Creational-Patterns" class="headerlink" title="Creational Patterns"></a>Creational Patterns</h3><p>主要有以下几种:</p>
 <ul>
 <li>Factory Method</li>
@@ -322,6 +330,30 @@
 </ul>
 <h4 id="Command"><a href="#Command" class="headerlink" title="Command"></a>Command</h4><p>要有以下几个元素：实体，指令，执行者。指令由执行者实施，并作用于实体。下面的例子就是由<code>Broker</code>执行买卖<code>Stock</code>的操作。</p>
 <img src="/2016/03/31/design-pattern/command.jpg" alt="command.jpg" title="">
+<h4 id="Interpreter"><a href="#Interpreter" class="headerlink" title="Interpreter"></a>Interpreter</h4><p>主要用来解释文本，去衡量特定情况是否发生。该模式可以用在SQL语言解析等。</p>
+<img src="/2016/03/31/design-pattern/interpreter.jpg" alt="interpreter.jpg" title="">
+<h4 id="Mediator"><a href="#Mediator" class="headerlink" title="Mediator"></a>Mediator</h4><p>Mediator通常用于简化多个物体之间的信号传递。通常多个物体会共享一个类似EventBus的类，使用EventBus的静态方法共享信息。</p>
+<p>下面是一个聊天室的例子。</p>
+<img src="/2016/03/31/design-pattern/mediator.jpg" alt="mediator.jpg" title="">
+<h4 id="State"><a href="#State" class="headerlink" title="State"></a>State</h4><p>在State模式中类的行为基于<code>状态</code>而变化。简单说就是实体具备几个互斥的状态。</p>
+<img src="/2016/03/31/design-pattern/state.jpg" alt="state.jpg" title="">
+<h4 id="Strategy"><a href="#Strategy" class="headerlink" title="Strategy"></a>Strategy</h4><p>在策略模式中，类行为或者算法可以在运行时动态更改。核心在于<code>动态更改</code>。</p>
+<p><code>Strategy</code> 和 <code>Interpreter</code> 有相似的地方，因为<code>解释</code>也算作一种<code>策略</code></p>
+<p>下面的例子中，我们可以动态修改计算策略（加或减）。<br><img src="/2016/03/31/design-pattern/strategy.jpg" alt="strategy.jpg" title=""></p>
+<h4 id="Chain-of-Responsibility"><a href="#Chain-of-Responsibility" class="headerlink" title="Chain of Responsibility"></a>Chain of Responsibility</h4><p>该设计模式讲究<code>分工</code>原则。对于一个请求，创建一个链式的处理器，当一个处理器无法处理请求时，将该请求转发给另一个处理器。值得注意的是，这个链式处理器有层次关系，通常按照一定顺序链接起来。</p>
+<p>下面例子是一个Logger,根据等级又可分为<code>INFO</code>,<code>DEBUG</code>,<code>ERROR</code>来输出。类似<code>Logcat</code><br><img src="/2016/03/31/design-pattern/chain.jpg" alt="chain.jpg" title=""></p>
+<h4 id="Visitor"><a href="#Visitor" class="headerlink" title="Visitor"></a>Visitor</h4><p>访问者模式有以下两个功能：</p>
+<ol>
+<li>可以将Object与算法分离</li>
+<li>通过这种模式我们可以添加新功能但不需要修改原有结构</li>
+</ol>
+<p>这个模式其实比较诡异，建议直接看这个<a href="http://www.tutorialspoint.com/design_pattern/visitor_pattern.htm" target="_blank" rel="external">链接</a></p>
+<p>在链接的例子中，我们可以添加其他<code>ComputerPart</code>，同时不需要修改原内容。</p>
+<h4 id="Template"><a href="#Template" class="headerlink" title="Template"></a>Template</h4><p>有一个模板类具备一些抽象方法，而子类需要重写该方法以实现自己的功能。通常模板类要有一个非抽象的方法调用子类实现的具体方法。具体可以看下面的例子。</p>
+<img src="/2016/03/31/design-pattern/template-1.jpg" alt="template-1.jpg" title="">
+<img src="/2016/03/31/design-pattern/template-2.jpg" alt="template-2.jpg" title="">
+<h4 id="Memento"><a href="#Memento" class="headerlink" title="Memento"></a>Memento</h4><p>该模式可以将Object回滚到之前的状态。感觉没什么意思。</p>
+
       
     </div>
     
@@ -367,7 +399,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="design-pattern" data-title="design-pattern" data-url="http://yoursite.com/2016/03/31/design-pattern/"></div>
+	<div class="ds-thread" data-thread-key="design-pattern" data-title="设计模式" data-url="http://yoursite.com/2016/03/31/design-pattern/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

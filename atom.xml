@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-04-01T04:30:38.000Z</updated>
+  <updated>2016-04-01T15:35:12.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,18 +16,19 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>design-pattern</title>
+    <title>设计模式</title>
     <link href="http://yoursite.com/2016/03/31/design-pattern/"/>
     <id>http://yoursite.com/2016/03/31/design-pattern/</id>
     <published>2016-03-31T17:57:22.000Z</published>
-    <updated>2016-04-01T04:30:38.000Z</updated>
+    <updated>2016-04-01T15:35:12.000Z</updated>
     
     <content type="html">&lt;p&gt;主要介绍了GOF系列的设计模式&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;##Gang of Four(GOF)&lt;br&gt;可以翻译为四人帮，指得是四个人一起出了一本名为《Design Patterns - Elements of Reusable Object-Oriented Software》的书。书中介绍了设计模式的概念。&lt;/p&gt;
 &lt;p&gt;设计模式，主要讲的是&lt;code&gt;可重用&lt;/code&gt;，&lt;code&gt;扩展性强&lt;/code&gt;，&lt;code&gt;优雅&lt;/code&gt;的解决问题的方法。他不是一个数据结构。相比于领域相关的设计，设计模式更贴近于代码层面的设计。&lt;/p&gt;
 &lt;p&gt;感觉几乎所有的设计模式都离不开&lt;code&gt;接口&lt;/code&gt;和&lt;code&gt;继承&lt;/code&gt;这两个概念。&lt;/p&gt;
 &lt;h2 id=&quot;Design-Patterns&quot;&gt;&lt;a href=&quot;#Design-Patterns&quot; class=&quot;headerlink&quot; title=&quot;Design Patterns&quot;&gt;&lt;/a&gt;Design Patterns&lt;/h2&gt;&lt;p&gt;基于GOF的设计模式可分为三部分，分别是&lt;code&gt;Creational Patterns&lt;/code&gt;,&lt;code&gt;Structural Patterns&lt;/code&gt;,&lt;code&gt;Behavioral Patterns&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;关于Design Patterns,最好的学习资料就是&lt;a href=&quot;http://www.tutorialspoint.com/design_pattern/prototype_pattern.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;tutorialspoint&lt;/a&gt;。这篇笔记后续主要介绍我还不熟悉，或者觉得需要深究的设计模式。&lt;/p&gt;
+&lt;p&gt;如果你是初学者,请参考资料&lt;a href=&quot;http://www.tutorialspoint.com/design_pattern/prototype_pattern.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;tutorialspoint&lt;/a&gt;。这里主要是我的笔记，记录了我的理解与想法。&lt;/p&gt;
+&lt;p&gt;设计模式主要追求的是重用性和拓展性。强行在这里扯运行效率就是耍流氓。&lt;/p&gt;
 &lt;h3 id=&quot;Creational-Patterns&quot;&gt;&lt;a href=&quot;#Creational-Patterns&quot; class=&quot;headerlink&quot; title=&quot;Creational Patterns&quot;&gt;&lt;/a&gt;Creational Patterns&lt;/h3&gt;&lt;p&gt;主要有以下几种:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Factory Method&lt;/li&gt;
@@ -98,7 +99,31 @@
 &lt;li&gt;Memento&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&quot;Command&quot;&gt;&lt;a href=&quot;#Command&quot; class=&quot;headerlink&quot; title=&quot;Command&quot;&gt;&lt;/a&gt;Command&lt;/h4&gt;&lt;p&gt;要有以下几个元素：实体，指令，执行者。指令由执行者实施，并作用于实体。下面的例子就是由&lt;code&gt;Broker&lt;/code&gt;执行买卖&lt;code&gt;Stock&lt;/code&gt;的操作。&lt;/p&gt;
-&lt;img src=&quot;/2016/03/31/design-pattern/command.jpg&quot; alt=&quot;command.jpg&quot; title=&quot;&quot;&gt;</content>
+&lt;img src=&quot;/2016/03/31/design-pattern/command.jpg&quot; alt=&quot;command.jpg&quot; title=&quot;&quot;&gt;
+&lt;h4 id=&quot;Interpreter&quot;&gt;&lt;a href=&quot;#Interpreter&quot; class=&quot;headerlink&quot; title=&quot;Interpreter&quot;&gt;&lt;/a&gt;Interpreter&lt;/h4&gt;&lt;p&gt;主要用来解释文本，去衡量特定情况是否发生。该模式可以用在SQL语言解析等。&lt;/p&gt;
+&lt;img src=&quot;/2016/03/31/design-pattern/interpreter.jpg&quot; alt=&quot;interpreter.jpg&quot; title=&quot;&quot;&gt;
+&lt;h4 id=&quot;Mediator&quot;&gt;&lt;a href=&quot;#Mediator&quot; class=&quot;headerlink&quot; title=&quot;Mediator&quot;&gt;&lt;/a&gt;Mediator&lt;/h4&gt;&lt;p&gt;Mediator通常用于简化多个物体之间的信号传递。通常多个物体会共享一个类似EventBus的类，使用EventBus的静态方法共享信息。&lt;/p&gt;
+&lt;p&gt;下面是一个聊天室的例子。&lt;/p&gt;
+&lt;img src=&quot;/2016/03/31/design-pattern/mediator.jpg&quot; alt=&quot;mediator.jpg&quot; title=&quot;&quot;&gt;
+&lt;h4 id=&quot;State&quot;&gt;&lt;a href=&quot;#State&quot; class=&quot;headerlink&quot; title=&quot;State&quot;&gt;&lt;/a&gt;State&lt;/h4&gt;&lt;p&gt;在State模式中类的行为基于&lt;code&gt;状态&lt;/code&gt;而变化。简单说就是实体具备几个互斥的状态。&lt;/p&gt;
+&lt;img src=&quot;/2016/03/31/design-pattern/state.jpg&quot; alt=&quot;state.jpg&quot; title=&quot;&quot;&gt;
+&lt;h4 id=&quot;Strategy&quot;&gt;&lt;a href=&quot;#Strategy&quot; class=&quot;headerlink&quot; title=&quot;Strategy&quot;&gt;&lt;/a&gt;Strategy&lt;/h4&gt;&lt;p&gt;在策略模式中，类行为或者算法可以在运行时动态更改。核心在于&lt;code&gt;动态更改&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Strategy&lt;/code&gt; 和 &lt;code&gt;Interpreter&lt;/code&gt; 有相似的地方，因为&lt;code&gt;解释&lt;/code&gt;也算作一种&lt;code&gt;策略&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;下面的例子中，我们可以动态修改计算策略（加或减）。&lt;br&gt;&lt;img src=&quot;/2016/03/31/design-pattern/strategy.jpg&quot; alt=&quot;strategy.jpg&quot; title=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;Chain-of-Responsibility&quot;&gt;&lt;a href=&quot;#Chain-of-Responsibility&quot; class=&quot;headerlink&quot; title=&quot;Chain of Responsibility&quot;&gt;&lt;/a&gt;Chain of Responsibility&lt;/h4&gt;&lt;p&gt;该设计模式讲究&lt;code&gt;分工&lt;/code&gt;原则。对于一个请求，创建一个链式的处理器，当一个处理器无法处理请求时，将该请求转发给另一个处理器。值得注意的是，这个链式处理器有层次关系，通常按照一定顺序链接起来。&lt;/p&gt;
+&lt;p&gt;下面例子是一个Logger,根据等级又可分为&lt;code&gt;INFO&lt;/code&gt;,&lt;code&gt;DEBUG&lt;/code&gt;,&lt;code&gt;ERROR&lt;/code&gt;来输出。类似&lt;code&gt;Logcat&lt;/code&gt;&lt;br&gt;&lt;img src=&quot;/2016/03/31/design-pattern/chain.jpg&quot; alt=&quot;chain.jpg&quot; title=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;Visitor&quot;&gt;&lt;a href=&quot;#Visitor&quot; class=&quot;headerlink&quot; title=&quot;Visitor&quot;&gt;&lt;/a&gt;Visitor&lt;/h4&gt;&lt;p&gt;访问者模式有以下两个功能：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;可以将Object与算法分离&lt;/li&gt;
+&lt;li&gt;通过这种模式我们可以添加新功能但不需要修改原有结构&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这个模式其实比较诡异，建议直接看这个&lt;a href=&quot;http://www.tutorialspoint.com/design_pattern/visitor_pattern.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;链接&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在链接的例子中，我们可以添加其他&lt;code&gt;ComputerPart&lt;/code&gt;，同时不需要修改原内容。&lt;/p&gt;
+&lt;h4 id=&quot;Template&quot;&gt;&lt;a href=&quot;#Template&quot; class=&quot;headerlink&quot; title=&quot;Template&quot;&gt;&lt;/a&gt;Template&lt;/h4&gt;&lt;p&gt;有一个模板类具备一些抽象方法，而子类需要重写该方法以实现自己的功能。通常模板类要有一个非抽象的方法调用子类实现的具体方法。具体可以看下面的例子。&lt;/p&gt;
+&lt;img src=&quot;/2016/03/31/design-pattern/template-1.jpg&quot; alt=&quot;template-1.jpg&quot; title=&quot;&quot;&gt;
+&lt;img src=&quot;/2016/03/31/design-pattern/template-2.jpg&quot; alt=&quot;template-2.jpg&quot; title=&quot;&quot;&gt;
+&lt;h4 id=&quot;Memento&quot;&gt;&lt;a href=&quot;#Memento&quot; class=&quot;headerlink&quot; title=&quot;Memento&quot;&gt;&lt;/a&gt;Memento&lt;/h4&gt;&lt;p&gt;该模式可以将Object回滚到之前的状态。感觉没什么意思。&lt;/p&gt;
+</content>
     
     <summary type="html">
     
@@ -118,7 +143,7 @@
     <link href="http://yoursite.com/2016/03/09/mysql-tutorial/"/>
     <id>http://yoursite.com/2016/03/09/mysql-tutorial/</id>
     <published>2016-03-09T20:05:07.000Z</published>
-    <updated>2016-03-14T03:37:05.000Z</updated>
+    <updated>2016-04-01T04:34:33.000Z</updated>
     
     <content type="html">&lt;p&gt;主要介绍MYSQL数据库的基本知识和库函数指令。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -151,7 +176,7 @@
     
     </summary>
     
-      <category term="tutorial" scheme="http://yoursite.com/categories/tutorial/"/>
+      <category term="tutorials" scheme="http://yoursite.com/categories/tutorials/"/>
     
     
       <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
