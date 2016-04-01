@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/03/06/linux-auto-script/index.html">
 <meta property="og:site_name" content="Lei YU's blog">
 <meta property="og:description" content="主要介绍如何在Ubuntu下添加开机自动脚本。">
-<meta property="og:updated_time" content="2016-03-07T04:45:16.000Z">
+<meta property="og:updated_time" content="2016-03-13T03:41:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu下添加开机自动脚本">
 <meta name="twitter:description" content="主要介绍如何在Ubuntu下添加开机自动脚本。">
@@ -119,7 +119,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/18653/" style="font-size: 10px;">18653</a> <a href="/tags/architectural-styles/" style="font-size: 10px;">architectural styles</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a>
+						<a href="/tags/18653/" style="font-size: 10px;">18653</a> <a href="/tags/architectural-styles/" style="font-size: 10px;">architectural styles</a> <a href="/tags/design-pattern/" style="font-size: 10px;">design pattern</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a>
 					</div>
 				</section>
 				
@@ -253,9 +253,9 @@
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo chmod 755 run_server.sh</span><br></pre></td></tr></table></figure>
 <h3 id="3-将脚本放置在启动路径下"><a href="#3-将脚本放置在启动路径下" class="headerlink" title="3. 将脚本放置在启动路径下"></a>3. 将脚本放置在启动路径下</h3><p>将<code>run_server.sh</code>移动到<code>/etc/init.d</code>路径下，可以直接拷贝，也可以链接过去<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo cp run_server.sh /etc/init.d/</span><br></pre></td></tr></table></figure></p>
 <h3 id="4-将脚本添加到启动脚本。"><a href="#4-将脚本添加到启动脚本。" class="headerlink" title="4. 将脚本添加到启动脚本。"></a>4. 将脚本添加到启动脚本。</h3><p>执行如下指令，在这里<code>90</code>表明一个优先级，越高表示执行的越晚</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /etc/init.d</span><br><span class="line">$ sudo update-rc.d run_server defaults <span class="number">90</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /etc/init.d/</span><br><span class="line">$ sudo update-rc.d run_server defaults <span class="number">90</span></span><br></pre></td></tr></table></figure>
 <h3 id="如何移除该脚本"><a href="#如何移除该脚本" class="headerlink" title="如何移除该脚本"></a>如何移除该脚本</h3><p>很简单，执行如下指令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo update-rc.d <span class="operator">-f</span> run_server remove</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo update-rc.d <span class="operator">-f</span> run_server.sh remove</span><br></pre></td></tr></table></figure>
 
       
     </div>

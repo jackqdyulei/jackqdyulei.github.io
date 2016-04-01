@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>design-pattern | Lei YU&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="主要介绍了GOF系列的设计模式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="design-pattern">
+<meta property="og:url" content="http://yoursite.com/2016/03/31/design-pattern/index.html">
+<meta property="og:site_name" content="Lei YU's blog">
+<meta property="og:description" content="主要介绍了GOF系列的设计模式">
+<meta property="og:image" content="http://yoursite.com/2016/03/31/design-pattern/factory-method.jpg">
+<meta property="og:image" content="http://yoursite.com/2016/03/31/design-pattern/abstract-factory.jpg">
+<meta property="og:image" content="http://yoursite.com/2016/03/31/design-pattern/adapter.jpg">
+<meta property="og:image" content="http://yoursite.com/2016/03/31/design-pattern/bridge-1.jpg">
+<meta property="og:image" content="http://yoursite.com/2016/03/31/design-pattern/bridge-2.jpg">
+<meta property="og:image" content="http://yoursite.com/2016/03/31/design-pattern/composite.jpg">
+<meta property="og:image" content="http://yoursite.com/2016/03/31/design-pattern/decorator.jpg">
+<meta property="og:image" content="http://yoursite.com/2016/03/31/design-pattern/flyweight.jpg">
+<meta property="og:updated_time" content="2016-04-01T04:21:33.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="design-pattern">
+<meta name="twitter:description" content="主要介绍了GOF系列的设计模式">
+  
+    <link rel="alternative" href="/atom.xml" title="Lei YU&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/images/avater.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Lei YU</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Keep it simple, stupid</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/technique">技术</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/jackqdyulei" title="github">github</a>
+					        
+								<a class="linkedin" target="_blank" href="https://www.linkedin.com/profile/preview?locale=en_US&trk=prof-0-sb-preview-primary-button" title="linkedin">linkedin</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/1875087917/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/yu-lei-50-41" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/18653/" style="font-size: 10px;">18653</a> <a href="/tags/architectural-styles/" style="font-size: 10px;">architectural styles</a> <a href="/tags/design-pattern/" style="font-size: 10px;">design pattern</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://wdxtub.com/">小土刀的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">很懒，什么也没留下</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Lei YU</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/images/avater.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Lei YU</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Keep it simple, stupid</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/technique">技术</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/jackqdyulei" title="github">github</a>
+			        
+						<a class="linkedin" target="_blank" href="https://www.linkedin.com/profile/preview?locale=en_US&trk=prof-0-sb-preview-primary-button" title="linkedin">linkedin</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/1875087917/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/yu-lei-50-41" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-design-pattern" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/31/design-pattern/" class="article-date">
+  	<time datetime="2016-03-31T17:57:22.000Z" itemprop="datePublished">2016-03-31</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      design-pattern
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/design-pattern/">design pattern</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/tutorials/">tutorials</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>主要介绍了GOF系列的设计模式<br><a id="more"></a></p>
+<p>##Gang of Four(GOF)<br>可以翻译为四人帮，指得是四个人一起出了一本名为《Design Patterns - Elements of Reusable Object-Oriented Software》的书。书中介绍了设计模式的概念。</p>
+<p>设计模式，主要讲的是<code>可重用</code>，<code>扩展性强</code>，<code>优雅</code>的解决问题的方法。他不是一个数据结构。相比于领域相关的设计，设计模式更贴近于代码层面的设计。</p>
+<p>感觉几乎所有的设计模式都离不开<code>接口</code>和<code>继承</code>这两个概念。</p>
+<h2 id="Design-Patterns"><a href="#Design-Patterns" class="headerlink" title="Design Patterns"></a>Design Patterns</h2><p>基于GOF的设计模式可分为三部分，分别是<code>Creational Patterns</code>,<code>Structural Patterns</code>,<code>Behavioral Patterns</code>。</p>
+<p>关于Design Patterns,最好的学习资料就是<a href="http://www.tutorialspoint.com/design_pattern/prototype_pattern.htm" target="_blank" rel="external">tutorialspoint</a>。这篇笔记后续主要介绍我还不熟悉，或者觉得需要深究的设计模式。</p>
+<h3 id="Creational-Patterns"><a href="#Creational-Patterns" class="headerlink" title="Creational Patterns"></a>Creational Patterns</h3><p>主要有以下几种:</p>
+<ul>
+<li>Factory Method</li>
+<li>Abstract Factory</li>
+<li>Singleton</li>
+<li>Builder</li>
+<li>Prototype</li>
+</ul>
+<h4 id="Factory-Mehthod"><a href="#Factory-Mehthod" class="headerlink" title="Factory Mehthod"></a>Factory Mehthod</h4><p>工厂模式，提供创建Object的方法。可能会比较奇怪，创建的话直接用关键词<code>new</code>不就可以了吗？</p>
+<p>该方法就是想将<code>new</code>操作封装起来。例如有很多种<code>Shape</code>，比如<code>Circle</code>或者<code>Square</code>。我们可以通过如下代码创建：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Shape shape1 = shapeFactory.getShape(<span class="string">"CIRCLE"</span>);</span><br><span class="line">Shape shape3 = shapeFactory.getShape(<span class="string">"SQUARE"</span>);</span><br></pre></td></tr></table></figure></p>
+<p>通过工厂模式，首先我们获得的是<code>Shape</code>接口，并不清楚关于<code>CIRCLE</code>的真正Object是如何创建的。该Object可能是<code>CIRCLE</code>,也可能是<code>MYCIRCLE</code>。</p>
+<p>该模式的好处有两点：</p>
+<ol>
+<li>封装了创建Object的方法，有更强的安全性</li>
+<li>提高了代码的复用性。比如想将<code>CIRCLE</code>改成<code>MYCIRCLE</code>，只需要修改工厂，不需要在整个项目中全局修改。</li>
+</ol>
+<img src="/2016/03/31/design-pattern/factory-method.jpg" alt="factory-method.jpg" title="">
+<h4 id="Abstract-Factory"><a href="#Abstract-Factory" class="headerlink" title="Abstract Factory"></a>Abstract Factory</h4><p>如果工厂模式是用来创建Object，那么抽象工厂就是用来创建不同的工厂。层级上高了一层，但是感觉换汤不换药。</p>
+<img src="/2016/03/31/design-pattern/abstract-factory.jpg" alt="abstract-factory.jpg" title="">
+<h4 id="Builder"><a href="#Builder" class="headerlink" title="Builder"></a>Builder</h4><p>该方法用于一步一步创建复杂的Object。我觉得最经典的例子就是Android中创建对话框的示例代码。我们先创建一个Builder,随后添加一系列属性，最后创建这个Object。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">AlertDialog.Builder builder = <span class="keyword">new</span> AlertDialog.Builder(getActivity());</span><br><span class="line">builder.setMessage(<span class="string">"Hello"</span>).setTitle(<span class="string">"Title"</span>);</span><br><span class="line">Dialog dialog = builder.create();</span><br></pre></td></tr></table></figure>
+<h4 id="Prototype"><a href="#Prototype" class="headerlink" title="Prototype"></a>Prototype</h4><p>核心思想就是创建缓存。当直接创建一个Object开销很大时，我们可以在工厂内存做一些缓存。用于快速创建Object。</p>
+<p>例如，当创建Object需要读取数据库数据时，我们可以将部分数据缓存起来，那么当下一次创建时就不需要繁重的数据库读取操作了。</p>
+<p>或者，我们可以缓存整个Object，后面通过<code>clone</code>方法去创建新对象。</p>
+<h3 id="Structural-Patterns"><a href="#Structural-Patterns" class="headerlink" title="Structural Patterns"></a>Structural Patterns</h3><p>主要有以下几种</p>
+<ul>
+<li>Adapter</li>
+<li>Bridge</li>
+<li>Composite</li>
+<li>Decorator</li>
+<li>Facade</li>
+<li>Flyweight</li>
+<li>Proxy</li>
+</ul>
+<p>感觉这类Design Pattern主要解决的是在已有架构上如何优雅的添加新功能。既要有可拓展性，又不需要过分修改原代码。</p>
+<h4 id="Adapter"><a href="#Adapter" class="headerlink" title="Adapter"></a>Adapter</h4><p>Adapter 主要用于弥补两个接口不兼容的问题。最早是在Android里遇到的<code>listview</code>的<code>Adapter</code>。通常<code>Adapter</code>要实现一系列接口，随后其他主类具备<code>Adapter</code>的实例，随后按照具体情况调用<code>Adapter</code>的接口实现。</p>
+<p>感觉还是蛮抽象的，举个例子。当前有<code>AudioPlayer</code>具有<code>play</code>功能。如果想添加其他的<code>play</code>功能，并且该功能已经被<code>VLCPlayer</code>和<code>MP4Player</code>实现。我们可以在<code>AudioPlayer</code>和其他player之间加一个<code>Adapter</code>。</p>
+<img src="/2016/03/31/design-pattern/adapter.jpg" alt="adapter.jpg" title="">
+<h4 id="Bridge"><a href="#Bridge" class="headerlink" title="Bridge"></a>Bridge</h4><p>个人感觉这是目前最难理解的设计模式。桥接模式把事物对象和其具体行为、具体特征分离开来，使它们可以各自独立的变化。如下图，我们现在有一套<code>Abstraction</code>，也叫<code>具体对象</code>。然后又有一系列<code>Implementor</code>,也可以称之为<code>行为</code>。通过桥接模式我们可以让对象更灵活得具备不同的行为。</p>
+<img src="/2016/03/31/design-pattern/bridge-1.jpg" alt="bridge-1.jpg" title="">
+<p>下面是一个更具体的例子，我们可以让<code>Circle</code>（事物）具备不同的<code>Color</code>（行为）</p>
+<img src="/2016/03/31/design-pattern/bridge-2.jpg" alt="bridge-2.jpg" title="">
+<h4 id="Composite"><a href="#Composite" class="headerlink" title="Composite"></a>Composite</h4><p>当我们对于一组Object相同对待时，可以用Composite设计模式。通常这些Object用树结构存储起来，并具备一定层级关系。</p>
+<p>简单讲，当我们有很多有关联的节点并且只有遍历操作时，可以将他们存成树结构（Composite模式）。</p>
+<p>感觉不常用。</p>
+<img src="/2016/03/31/design-pattern/composite.jpg" alt="composite.jpg" title="">
+<h4 id="Decorator"><a href="#Decorator" class="headerlink" title="Decorator"></a>Decorator</h4><p>当我们想基于原来基础添加新功能，同时不想破坏原有结构时，可以用Decorator模式。</p>
+<p>简单讲，就是在外面包一层，同时添加些新功能。要注意Decorator一定要继承原先的接口，保持接口一致。</p>
+<img src="/2016/03/31/design-pattern/decorator.jpg" alt="decorator.jpg" title="">
+<h4 id="Facade"><a href="#Facade" class="headerlink" title="Facade"></a>Facade</h4><p>隐藏框架的复杂细节，同时提供一些简单的接口。</p>
+<h3 id="Flyweight"><a href="#Flyweight" class="headerlink" title="Flyweight"></a>Flyweight</h3><p>核心思路就是减少不必要的实例创建，减少内存占用率并提高性能。通常是用hashmap实现。</p>
+<p>感觉就是在获取一个实例时，检查是否有相同的，如果有直接返回，没有就创建。</p>
+<p>和Prototype的本质区别是<code>clone</code>方法的有无。</p>
+<img src="/2016/03/31/design-pattern/flyweight.jpg" alt="flyweight.jpg" title="">
+<h3 id="Proxy"><a href="#Proxy" class="headerlink" title="Proxy"></a>Proxy</h3><p>一个类代表另一个类。同样是外包一层，但是这次不添加任何新功能。感觉是最鸡肋的设计模式了。</p>
+<p>感觉和代理服务器一样，能解决特定问题（比如翻墙），但是对效率没有任何提高。</p>
+<h3 id="Behavioral-Patterns"><a href="#Behavioral-Patterns" class="headerlink" title="Behavioral Patterns"></a>Behavioral Patterns</h3><ul>
+<li>Command</li>
+<li>Interpreter</li>
+<li>Iterator</li>
+<li>Mediator</li>
+<li>Observer</li>
+<li>State</li>
+<li>Strategy</li>
+<li>Chain of Responsibility</li>
+<li>Visitor</li>
+<li>Template Method</li>
+<li>Memento</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/03/09/mysql-tutorial/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MYSQL 数据库教程</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="design-pattern" data-title="design-pattern" data-url="http://yoursite.com/2016/03/31/design-pattern/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"jackqdyulei-github"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Lei YU
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
