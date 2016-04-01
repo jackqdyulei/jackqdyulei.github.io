@@ -20,7 +20,8 @@
 <meta property="og:image" content="http://yoursite.com/2016/03/31/design-pattern/composite.jpg">
 <meta property="og:image" content="http://yoursite.com/2016/03/31/design-pattern/decorator.jpg">
 <meta property="og:image" content="http://yoursite.com/2016/03/31/design-pattern/flyweight.jpg">
-<meta property="og:updated_time" content="2016-04-01T04:21:33.000Z">
+<meta property="og:image" content="http://yoursite.com/2016/03/31/design-pattern/command.jpg">
+<meta property="og:updated_time" content="2016-04-01T04:30:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="design-pattern">
 <meta name="twitter:description" content="主要介绍了GOF系列的设计模式">
@@ -304,7 +305,7 @@
 <p>感觉就是在获取一个实例时，检查是否有相同的，如果有直接返回，没有就创建。</p>
 <p>和Prototype的本质区别是<code>clone</code>方法的有无。</p>
 <img src="/2016/03/31/design-pattern/flyweight.jpg" alt="flyweight.jpg" title="">
-<h3 id="Proxy"><a href="#Proxy" class="headerlink" title="Proxy"></a>Proxy</h3><p>一个类代表另一个类。同样是外包一层，但是这次不添加任何新功能。感觉是最鸡肋的设计模式了。</p>
+<h3 id="Proxy"><a href="#Proxy" class="headerlink" title="Proxy"></a>Proxy</h3><p>一个类代表另一个类。同样是外包一层，但是这次不添加任何新功能，但要有原类的所有接口。感觉是最鸡肋的设计模式了。</p>
 <p>感觉和代理服务器一样，能解决特定问题（比如翻墙），但是对效率没有任何提高。</p>
 <h3 id="Behavioral-Patterns"><a href="#Behavioral-Patterns" class="headerlink" title="Behavioral Patterns"></a>Behavioral Patterns</h3><ul>
 <li>Command</li>
@@ -319,7 +320,8 @@
 <li>Template Method</li>
 <li>Memento</li>
 </ul>
-
+<h4 id="Command"><a href="#Command" class="headerlink" title="Command"></a>Command</h4><p>要有以下几个元素：实体，指令，执行者。指令由执行者实施，并作用于实体。下面的例子就是由<code>Broker</code>执行买卖<code>Stock</code>的操作。</p>
+<img src="/2016/03/31/design-pattern/command.jpg" alt="command.jpg" title="">
       
     </div>
     
