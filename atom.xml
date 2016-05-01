@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-05-01T14:46:33.000Z</updated>
+  <updated>2016-05-01T14:54:07.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/05/01/18653-final/"/>
     <id>http://yoursite.com/2016/05/01/18653-final/</id>
     <published>2016-05-01T12:25:14.000Z</published>
-    <updated>2016-05-01T14:46:33.000Z</updated>
+    <updated>2016-05-01T14:54:07.000Z</updated>
     
     <content type="html">&lt;p&gt;有关18653-Software Architecture and Design的期末考试复习&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;总体介绍&quot;&gt;&lt;a href=&quot;#总体介绍&quot; class=&quot;headerlink&quot; title=&quot;总体介绍&quot;&gt;&lt;/a&gt;总体介绍&lt;/h1&gt;&lt;ul&gt;
@@ -29,7 +29,7 @@
 &lt;li&gt;Design patterns&lt;/li&gt;
 &lt;li&gt;ATAM&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&quot;Basic-concepts&quot;&gt;&lt;a href=&quot;#Basic-concepts&quot; class=&quot;headerlink&quot; title=&quot;Basic concepts&quot;&gt;&lt;/a&gt;Basic concepts&lt;/h1&gt;&lt;h2 id=&quot;Architecture-Standards&quot;&gt;&lt;a href=&quot;#Architecture-Standards&quot; class=&quot;headerlink&quot; title=&quot;Architecture Standards&quot;&gt;&lt;/a&gt;Architecture Standards&lt;/h2&gt;&lt;h3 id=&quot;What-are-Standards&quot;&gt;&lt;a href=&quot;#What-are-Standards&quot; class=&quot;headerlink&quot; title=&quot;What are Standards&quot;&gt;&lt;/a&gt;What are Standards&lt;/h3&gt;&lt;p&gt;A standard is a form of agreement between parties. There are many kinds of standards, such as notations, tools, processes..&lt;/p&gt;
+&lt;h1 id=&quot;Basic-concepts&quot;&gt;&lt;a href=&quot;#Basic-concepts&quot; class=&quot;headerlink&quot; title=&quot;Basic concepts&quot;&gt;&lt;/a&gt;Basic concepts&lt;/h1&gt;&lt;h2 id=&quot;Architecture-Standards&quot;&gt;&lt;a href=&quot;#Architecture-Standards&quot; class=&quot;headerlink&quot; title=&quot;Architecture Standards&quot;&gt;&lt;/a&gt;Architecture Standards&lt;/h2&gt;&lt;h3 id=&quot;What-are-Standards&quot;&gt;&lt;a href=&quot;#What-are-Standards&quot; class=&quot;headerlink&quot; title=&quot;What are Standards&quot;&gt;&lt;/a&gt;What are Standards&lt;/h3&gt;&lt;p&gt;A form of agreement between parties. There are many kinds of standards, such as notations, tools, processes…&lt;/p&gt;
 &lt;h3 id=&quot;Pros-and-cons-of-standards&quot;&gt;&lt;a href=&quot;#Pros-and-cons-of-standards&quot; class=&quot;headerlink&quot; title=&quot;Pros and cons of standards&quot;&gt;&lt;/a&gt;Pros and cons of standards&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Why use standards&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;To ensure &lt;code&gt;interoperability&lt;/code&gt; between products developed by different organizations&lt;/li&gt;
@@ -43,14 +43,14 @@
 &lt;h3 id=&quot;Pros-and-cons-of-early-adoption-早期采用Standards的优劣&quot;&gt;&lt;a href=&quot;#Pros-and-cons-of-early-adoption-早期采用Standards的优劣&quot; class=&quot;headerlink&quot; title=&quot;Pros and cons of early adoption(早期采用Standards的优劣)&quot;&gt;&lt;/a&gt;Pros and cons of early adoption(早期采用Standards的优劣)&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Benefits&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Improved ability to influence the standard&lt;/li&gt;
-&lt;li&gt;Early to market.(If standard becomes successful, early marketers will profit&lt;br&gt;)&lt;/li&gt;
+&lt;li&gt;Early to market.(If standard becomes successful, early marketers will profit)&lt;/li&gt;
 &lt;li&gt;Early experience&lt;br&gt;&lt;strong&gt;Drawbacks&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;Risk of failure&lt;/li&gt;
 &lt;li&gt;Moving target(Early standards tend to evolve, and maybe &lt;code&gt;buggy&lt;/code&gt;)&lt;/li&gt;
 &lt;li&gt;Lack of support&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;Prevalent-Architectural-Standards&quot;&gt;&lt;a href=&quot;#Prevalent-Architectural-Standards&quot; class=&quot;headerlink&quot; title=&quot;Prevalent Architectural Standards&quot;&gt;&lt;/a&gt;Prevalent Architectural Standards&lt;/h3&gt;&lt;h4 id=&quot;IEEE-1471&quot;&gt;&lt;a href=&quot;#IEEE-1471&quot; class=&quot;headerlink&quot; title=&quot;IEEE 1471&quot;&gt;&lt;/a&gt;IEEE 1471&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;A standards that Recommended practice for architecture description&lt;/li&gt;
+&lt;li&gt;Recommended practice for architecture description&lt;/li&gt;
 &lt;li&gt;Scope is limited to architecture descriptions&lt;/li&gt;
 &lt;li&gt;Identifies the importance of stakeholders and advocates models that are tailored to stakeholder needs&lt;/li&gt;
 &lt;li&gt;Very high level and useful as a starting point&lt;/li&gt;
@@ -58,37 +58,35 @@
 &lt;h4 id=&quot;DoDAF&quot;&gt;&lt;a href=&quot;#DoDAF&quot; class=&quot;headerlink&quot; title=&quot;DoDAF&quot;&gt;&lt;/a&gt;DoDAF&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;Basic Knowledge&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Short for &lt;code&gt;Department of Defense Architecture Framework&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Contains three views, and identifies specific viewpoints that should be captured&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Operational View: Identifies what needs to be accomplished, and who does it&lt;/li&gt;
-&lt;li&gt;System View: Describe the systems that provide or support operational functions and interconnections between them.&lt;/li&gt;
-&lt;li&gt;Technical Standards View: Identify standards, (engineering) guidelines, rules, conventions, and other documents&lt;/li&gt;
+&lt;li&gt;Contains three views, and identifies specific viewpoints that should be captured&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Operational View&lt;/strong&gt;: Identifies what needs to be accomplished, and who does it&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;System View&lt;/strong&gt;: Describe the systems that provide or support operational functions and interconnections between them.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Technical Standards View&lt;/strong&gt;: Identify standards, (engineering) guidelines, rules, conventions, and other documents&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Takes a high-level organizational perspective&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;Takes a high-level organizational perspective&lt;/li&gt;
 &lt;li&gt;Tells us a lot about WHAT to model, but nearly nothing about HOW to model it&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&quot;TOGAF&quot;&gt;&lt;a href=&quot;#TOGAF&quot; class=&quot;headerlink&quot; title=&quot;TOGAF&quot;&gt;&lt;/a&gt;TOGAF&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;Basic Knowledge&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Short for &lt;code&gt;The Open Group Architecture Framework&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;An &lt;code&gt;enterprise architecture&lt;/code&gt; framework&lt;ul&gt;
-&lt;li&gt;Focues beyond hardware/software&lt;/li&gt;
+&lt;li&gt;Focus beyond hardware/software&lt;/li&gt;
 &lt;li&gt;How can enterprises build systems to achieve business goals&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Four key areas addressed&lt;ul&gt;
-&lt;li&gt;Business concerns: address business strategies, organizations, and processes;&lt;/li&gt;
-&lt;li&gt;Application concerns: address applications to be deployed, their interactions, and their relationships to business processes;&lt;/li&gt;
-&lt;li&gt;Data concerns: address the structure of physical and logical data assets of an organization and the resources that manage these assets; and&lt;/li&gt;
-&lt;li&gt;Technology concerns: address issues of infrastructure and middleware.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Business concerns&lt;/strong&gt;: address business strategies, organizations, and processes;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Application concerns&lt;/strong&gt;: address applications to be deployed, their interactions, and their relationships to business processes;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data concerns&lt;/strong&gt;: address the structure of physical and logical data assets of an organization and the resources that manage these assets; and&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Technology concerns&lt;/strong&gt;: address issues of infrastructure and middleware.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;UML&quot;&gt;&lt;a href=&quot;#UML&quot; class=&quot;headerlink&quot; title=&quot;UML&quot;&gt;&lt;/a&gt;UML&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Basic Knowledge&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Short for &lt;code&gt;Unified Modeling Language&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;a general-purpose, developmental, modeling language in the field of software engineering(WIKI)&lt;/li&gt;
+&lt;li&gt;A general-purpose, developmental, modeling language in the field of software engineering(WIKI)&lt;/li&gt;
 &lt;li&gt;Provide a common syntactic framework to express many common types of design decisions&lt;/li&gt;
 &lt;li&gt;Documenting a system in UML does not ensure overall system quality&lt;/li&gt;
 &lt;/ul&gt;
@@ -101,7 +99,10 @@
 &lt;h4 id=&quot;Pros-and-Cons&quot;&gt;&lt;a href=&quot;#Pros-and-Cons&quot; class=&quot;headerlink&quot; title=&quot;Pros and Cons&quot;&gt;&lt;/a&gt;Pros and Cons&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;Benefits&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Simple mental model for developers&lt;/li&gt;
-&lt;li&gt;Simple scaling model for operations&lt;br&gt;&lt;strong&gt;Drawbacks&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Simple scaling model for operations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Drawbacks&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;Huge and intimidating code base for developers&lt;/li&gt;
 &lt;li&gt;Development tools get overburdened&lt;/li&gt;
 &lt;li&gt;Scaling is limited&lt;ul&gt;
@@ -123,29 +124,30 @@
 &lt;ul&gt;
 &lt;li&gt;API cannot be changed between microservices&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;SOA-vs-Microservices&quot;&gt;&lt;a href=&quot;#SOA-vs-Microservices&quot; class=&quot;headerlink&quot; title=&quot;SOA vs Microservices&quot;&gt;&lt;/a&gt;SOA vs Microservices&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;SOA&lt;/strong&gt;&lt;br&gt;Foucs on functionla decomposition, but&lt;/p&gt;
+&lt;h3 id=&quot;SOA-vs-Microservices&quot;&gt;&lt;a href=&quot;#SOA-vs-Microservices&quot; class=&quot;headerlink&quot; title=&quot;SOA vs Microservices&quot;&gt;&lt;/a&gt;SOA vs Microservices&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;SOA&lt;/strong&gt;&lt;br&gt;Focus on functionla decomposition, but&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;services are not required to be self-contained with data and UI&lt;/li&gt;
 &lt;li&gt;It is often thought as decomposition within tiers&lt;/li&gt;
 &lt;li&gt;does not focus on independent deployment units&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Microservices&lt;/strong&gt;&lt;br&gt;can be seen as &lt;code&gt;SOA-the good parts&lt;/code&gt;&lt;/p&gt;
-&lt;h4 id=&quot;Why-SOA-is-moving-toward-microservices-PPT上没找到&quot;&gt;&lt;a href=&quot;#Why-SOA-is-moving-toward-microservices-PPT上没找到&quot; class=&quot;headerlink&quot; title=&quot;Why SOA is moving toward microservices(PPT上没找到)&quot;&gt;&lt;/a&gt;Why SOA is moving toward microservices(PPT上没找到)&lt;/h4&gt;&lt;ul&gt;
+&lt;h4 id=&quot;Why-SOA-is-moving-toward-microservices-PPT上没找到-自己整理的&quot;&gt;&lt;a href=&quot;#Why-SOA-is-moving-toward-microservices-PPT上没找到-自己整理的&quot; class=&quot;headerlink&quot; title=&quot;Why SOA is moving toward microservices(PPT上没找到,自己整理的)&quot;&gt;&lt;/a&gt;Why SOA is moving toward microservices(PPT上没找到,自己整理的)&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;Microservices are the first post-DevOps revolution architecture.&lt;/li&gt;
 &lt;li&gt;Microservices make change less expensive.&lt;/li&gt;
 &lt;li&gt;Microservices enable unique opportunities.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&quot;Some-discussions-of-using-Spring-Cloud-for-SOC-project&quot;&gt;&lt;a href=&quot;#Some-discussions-of-using-Spring-Cloud-for-SOC-project&quot; class=&quot;headerlink&quot; title=&quot;Some discussions of using Spring Cloud for SOC project.&quot;&gt;&lt;/a&gt;Some discussions of using Spring Cloud for SOC project.&lt;/h4&gt;&lt;h2 id=&quot;Design-patterns&quot;&gt;&lt;a href=&quot;#Design-patterns&quot; class=&quot;headerlink&quot; title=&quot;Design patterns&quot;&gt;&lt;/a&gt;Design patterns&lt;/h2&gt;&lt;p&gt;具体见另一篇文章，总之要理解所有的设计模式&lt;/p&gt;
+&lt;h4 id=&quot;Some-discussions-of-using-Spring-Cloud-for-SOC-project&quot;&gt;&lt;a href=&quot;#Some-discussions-of-using-Spring-Cloud-for-SOC-project&quot; class=&quot;headerlink&quot; title=&quot;Some discussions of using Spring Cloud for SOC project.&quot;&gt;&lt;/a&gt;Some discussions of using Spring Cloud for SOC project.&lt;/h4&gt;&lt;p&gt;看作业&lt;/p&gt;
+&lt;h2 id=&quot;Design-patterns&quot;&gt;&lt;a href=&quot;#Design-patterns&quot; class=&quot;headerlink&quot; title=&quot;Design patterns&quot;&gt;&lt;/a&gt;Design patterns&lt;/h2&gt;&lt;p&gt;具体见另一篇Blog，总之要理解所有的设计模式&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Understand every design pattern&lt;/li&gt;
 &lt;li&gt;Study homework &amp;amp; projects&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;Architectural-Styles&quot;&gt;&lt;a href=&quot;#Architectural-Styles&quot; class=&quot;headerlink&quot; title=&quot;Architectural Styles&quot;&gt;&lt;/a&gt;Architectural Styles&lt;/h2&gt;&lt;p&gt;具体见另一篇文章&lt;/p&gt;
+&lt;h2 id=&quot;Architectural-Styles&quot;&gt;&lt;a href=&quot;#Architectural-Styles&quot; class=&quot;headerlink&quot; title=&quot;Architectural Styles&quot;&gt;&lt;/a&gt;Architectural Styles&lt;/h2&gt;&lt;p&gt;具体见另一篇Blog&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Understand every style&lt;/li&gt;
 &lt;li&gt;Study homework &amp;amp; projects&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;Implementing-Architectures&quot;&gt;&lt;a href=&quot;#Implementing-Architectures&quot; class=&quot;headerlink&quot; title=&quot;Implementing Architectures&quot;&gt;&lt;/a&gt;Implementing Architectures&lt;/h2&gt;&lt;p&gt;Mapping problem of design decisions to&lt;br&gt;implementation artifacts (code, executables, etc.)&lt;/p&gt;
+&lt;h2 id=&quot;Implementing-Architectures&quot;&gt;&lt;a href=&quot;#Implementing-Architectures&quot; class=&quot;headerlink&quot; title=&quot;Implementing Architectures&quot;&gt;&lt;/a&gt;Implementing Architectures&lt;/h2&gt;&lt;p&gt;Mapping problem of design decisions to implementation artifacts (code, executables, etc.)&lt;/p&gt;
 &lt;h3 id=&quot;Common-Element-Mapping&quot;&gt;&lt;a href=&quot;#Common-Element-Mapping&quot; class=&quot;headerlink&quot; title=&quot;Common Element Mapping&quot;&gt;&lt;/a&gt;Common Element Mapping&lt;/h3&gt;&lt;h4 id=&quot;Components-and-Connectors&quot;&gt;&lt;a href=&quot;#Components-and-Connectors&quot; class=&quot;headerlink&quot; title=&quot;Components and Connectors&quot;&gt;&lt;/a&gt;Components and Connectors&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;Partitions of application computation and&lt;br&gt;communication functionality&lt;/li&gt;
 &lt;li&gt;Modules, packages, libraries, classes&lt;h4 id=&quot;Interfaces&quot;&gt;&lt;a href=&quot;#Interfaces&quot; class=&quot;headerlink&quot; title=&quot;Interfaces&quot;&gt;&lt;/a&gt;Interfaces&lt;/h4&gt;&lt;/li&gt;
